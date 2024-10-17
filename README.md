@@ -2,22 +2,19 @@
 
 > This is my portfolio. Designed to be simplistic and clean while including features like a dark mode toggle, on-scroll animations and more.
 
-
 ## Tech Stack
 
 **_Frontend:_**
 
 - [Tailwind CSS](https://tailwindcss.com/) (Styling)
-<!-- - [Radix Primitives](https://www.radix-ui.com/primitives) (Headless UI components)
-- [Radix UI Colors](https://www.radix-ui.com/colors) (Color system)
+- [HeadlessUI](https://www.headlessui.com/) (UI components)
+<!-- - [Radix UI Colors](https://www.radix-ui.com/colors) (Color system)
 - [Framer Motion](https://www.framer.com/motion/) (Animations) -->
 
 **_Backend:_**
 
 - [Next.js](https://github.com/BrianRuizy/b-r.io/blob/main/nextjs.org)
 - [TypeScript](https://www.typescriptlang.org)
-
-
 
 ## Getting Started
 
