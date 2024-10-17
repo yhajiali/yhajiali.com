@@ -16,7 +16,7 @@ const PageNotFound = (): JSX.Element => {
       <h2 className="text-4xl font-semibold sm:text-5xl text-foreground">
         Page not found
       </h2>
-      <p className="foreground-secondary">
+      <p className="text-secondary">
         Sorry, the page you are looking for could not be found or has been
         removed :(
       </p>

@@ -20,7 +20,7 @@ const Navigation = () => {
   const pathname = `/${usePathname().split("/")[1]}`;
 
   return (
-    <header className="flex justify-between py-3 px-4 max-w-4xl mx-auto">
+    <header className="flex justify-between py-3 md:py-5 px-4 max-w-3xl mx-auto">
       <Logo />
 
       <nav className="flex justify-between items-center gap-3">

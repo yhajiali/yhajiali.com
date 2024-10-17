@@ -4,8 +4,9 @@
 
 :root {
   --background: #ffffff;
-  --background-secondary: #f7f7f7;
+  --background-secondary: #f0f0f0;
   --foreground: #171717;
+  --foreground-secondary: #646464;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,16 +14,13 @@
     --background: #0a0a0a;
     --background-secondary: #191919;
     --foreground: #ededed;
+    --foreground-secondary: #b4b4b4;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-}
-
-.foreground-secondary {
-  @apply text-black/70 dark:text-white/50;
 }
 
 @layer utilities {
