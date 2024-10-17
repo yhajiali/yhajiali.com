@@ -22,7 +22,7 @@ Make sure you have Node.js v18.17.0+ installed on your machine.
 
 1. **Install Dependencies**: `npm install`
 2. **Environment variables**: Copy `.env.example` to a new `.env.local`
-3. **Start Developing**: `npm run dev`, this will automatically create the .contentlayer files and start the Next.js development server.
+3. **Start Developing**: Run `npm run dev`, to start the Next.js development server.
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
