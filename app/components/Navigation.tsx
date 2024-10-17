@@ -20,24 +20,25 @@ const Navigation = () => {
   const pathname = `/${usePathname().split("/")[1]}`;
 
   return (
-    <header className="flex justify-between py-3 px-4">
+    <header className="flex justify-between py-3 px-4 max-w-4xl mx-auto">
       <Logo />
 
       <nav className="flex justify-between items-center gap-3">
-        <ul className="hidden md:flex">
+        <ul className="hidden md:flex items-center gap-1">
           {links.map((link) => (
-            <Link
-              key={link.href}
-              className={clsx(
-                "px-4 py-2 rounded-lg text-sm hover:text-primary transition-colors",
-                pathname === link.href
-                  ? "bg-background-secondary"
-                  : "dark:text-white/50"
-              )}
-              href={link.href}
-            >
-              {link.label}
-            </Link>
+            <li key={link.href}>
+              <Link
+                className={clsx(
+                  "px-4 py-2 rounded-lg text-sm hover:text-foreground transition-all duration-150",
+                  pathname === link.href
+                    ? "bg-background-secondary"
+                    : "dark:text-white/50"
+                )}
+                href={link.href}
+              >
+                {link.label}
+              </Link>
+            </li>
           ))}
         </ul>
 

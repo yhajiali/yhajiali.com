@@ -21,6 +21,10 @@ body {
   background: var(--background);
 }
 
+.foreground-secondary {
+  @apply text-black/70 dark:text-white/50;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
