@@ -5,12 +5,13 @@ import React from "react";
 const Logo = () => {
   return (
     <Link href="/" className="font-bold flex items-center">
-      <Image
-        src="/path/to/your/logo.png"
+      {/* <Image
+        src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
         alt="YH Logo"
-        width={100}
-        height={20}
-      />
+        width={30}
+        height={30}
+      /> */}
+      YH
     </Link>
   );
 };

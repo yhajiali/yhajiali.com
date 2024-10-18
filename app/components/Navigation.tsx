@@ -7,8 +7,8 @@ import { usePathname } from "next/navigation";
 import Logo from "./ui/Logo";
 import clsx from "clsx";
 
+import ThemeSwitcher from "./ui/ThemeSwitcher";
 import PopoverMenu from "./PopoverMenu";
-import { MoonIcon } from "@heroicons/react/24/solid";
 
 const links = [
   { label: "Home", href: "/" },
@@ -44,7 +44,7 @@ const Navigation = () => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <MoonIcon className="size-5" />
+          <ThemeSwitcher />
           <PopoverMenu links={links} pathname={pathname} />
         </div>
       </nav>

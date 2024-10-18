@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Link from "next/link";
 import clsx from "clsx";
 
@@ -23,7 +23,7 @@ const PopoverMenu = ({ links, pathname }: Props) => {
         <MenuItems
           transition
           anchor="bottom end"
-          className="w-40 mt-3 shadow-md origin-top-right rounded-xl border dark:border-white/5 dark:bg-white/5 p-1 text-sm/6 text-foreground transition duration-150 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0 z-50"
+          className="w-40 mt-3 shadow-md origin-top-right rounded-xl border dark:border-white/5 bg-background dark:bg-background-secondary p-1 text-sm/6 text-foreground transition duration-150 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0 z-50"
         >
           {links.map((link, idx) => (
             <MenuItem key={idx}>
