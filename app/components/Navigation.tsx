@@ -8,6 +8,7 @@ import Logo from "./ui/Logo";
 import clsx from "clsx";
 
 import PopoverMenu from "./PopoverMenu";
+import { MoonIcon } from "@heroicons/react/24/solid";
 
 const links = [
   { label: "Home", href: "/" },
@@ -23,7 +24,7 @@ const Navigation = () => {
     <header className="flex items-center justify-between py-5 px-6 md:px-4 max-w-3xl mx-auto sticky top-0 z-50 bg-background">
       <Logo />
 
-      <nav className="flex justify-between items-center gap-3">
+      <nav className="flex justify-between items-center gap-5">
         <ul className="hidden md:flex items-center gap-2">
           {links.map((link) => (
             <li key={link.href}>
@@ -42,7 +43,10 @@ const Navigation = () => {
           ))}
         </ul>
 
-        <PopoverMenu links={links} pathname={pathname} />
+        <div className="flex items-center gap-4">
+          <MoonIcon className="size-5" />
+          <PopoverMenu links={links} pathname={pathname} />
+        </div>
       </nav>
     </header>
   );

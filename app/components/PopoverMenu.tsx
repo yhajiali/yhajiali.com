@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Link from "next/link";
 import clsx from "clsx";
 
@@ -16,8 +16,8 @@ const PopoverMenu = ({ links, pathname }: Props) => {
   return (
     <div className="md:hidden flex">
       <Menu>
-        <MenuButton>
-          <BarsButton />
+        <MenuButton className="hover:cursor-pointer">
+          {({ active }) => <BarsButton menuOpen={active} />}
         </MenuButton>
 
         <MenuItems

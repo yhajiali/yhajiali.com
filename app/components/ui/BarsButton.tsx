@@ -1,36 +1,14 @@
 "use client";
 import clsx from "clsx";
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 
-const BarsButton = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const buttonRef = useRef<HTMLDivElement>(null);
+type BarsButtonProps = {
+  menuOpen: boolean; // Define the type for menuOpen
+};
 
-  // Close menu when clicking outside the button
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        buttonRef.current &&
-        !buttonRef.current.contains(event.target as Node)
-      ) {
-        setMenuOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-
+const BarsButton: React.FC<BarsButtonProps> = ({ menuOpen }) => {
   return (
-    <div
-      ref={buttonRef}
-      className="relative w-5 h-[13px] cursor-pointer z-[2000] group transition outline-none"
-      onClick={toggleMenu}
-    >
+    <div className="relative w-5 h-[13px] group transition outline-none">
       <div
         className={clsx(
           "w-full h-[1.5px] bg-black/70 group-hover:bg-foreground dark:bg-white/70 dark:group-hover:bg-white/90 rounded-sm absolute",
