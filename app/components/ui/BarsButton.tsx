@@ -28,7 +28,7 @@ const BarsButton = () => {
   return (
     <div
       ref={buttonRef}
-      className="relative w-4 h-[11px] cursor-pointer z-[2000] group transition"
+      className="relative w-5 h-[13px] cursor-pointer z-[2000] group transition outline-none"
       onClick={toggleMenu}
     >
       <div
@@ -49,7 +49,7 @@ const BarsButton = () => {
         className={clsx(
           "w-full h-[1.5px] bg-black/70 group-hover:bg-foreground dark:bg-white/70 dark:group-hover:bg-white/90 rounded-sm absolute",
           menuOpen
-            ? "bottom-1/3 -translate-y-1/2 -rotate-45 transition-[bottom,transform] duration-300 delay-[0ms,300ms] ease-in-out"
+            ? "bottom-[40%] -translate-y-1/2 -rotate-45 transition-[bottom,transform] duration-300 delay-[0ms,300ms] ease-in-out"
             : "bottom-0 rotate-0 transition-[bottom,transform] duration-300 delay-[300ms,0ms] ease-in-out"
         )}
       ></div>

@@ -20,11 +20,11 @@ const Navigation = () => {
   const pathname = `/${usePathname().split("/")[1]}`;
 
   return (
-    <header className="flex justify-between py-3 md:py-5 px-4 max-w-3xl mx-auto">
+    <header className="flex items-center justify-between py-5 px-6 md:px-4 max-w-3xl mx-auto sticky top-0 z-50 bg-background">
       <Logo />
 
       <nav className="flex justify-between items-center gap-3">
-        <ul className="hidden md:flex items-center gap-1">
+        <ul className="hidden md:flex items-center gap-2">
           {links.map((link) => (
             <li key={link.href}>
               <Link

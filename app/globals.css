@@ -23,8 +23,33 @@ body {
   background: var(--background);
 }
 
+/* Map styles */
+.mapboxgl-control-container {
+  display: none;
+}
+
+.map-marker {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgb(59 130 246);
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(255, 255, 255, 0.95);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
