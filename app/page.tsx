@@ -1,9 +1,13 @@
 import Link from "next/link";
-import Map from "./components/ui/Map";
 import Image from "next/image";
+
+import Map from "./components/ui/Map";
+
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { ArrowUpRightIcon, UserCircleIcon } from "@heroicons/react/24/outline";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+
+import avatar from "@/public/avatar.jpeg";
 
 export default function Home() {
   const socials = [
@@ -27,11 +31,15 @@ export default function Home() {
   return (
     <>
       <section className="space-y-12">
-        <div className="animate-fadein space-y-6">
-          <figure className="animate-popout size-14 md:size-16">
-            <div className="bg-background-secondary size-full rounded-full flex items-center justify-center font-semibold">
-              <UserCircleIcon className="size-6 text-secondary" />
-            </div>
+        <div className="animate-fadein space-y-5">
+          <figure className="animate-popout size-16 md:size-20 rounded-full overflow-hidden object-cover">
+            <Image
+              src={avatar}
+              alt="Yusuf Haji Ali"
+              width={200}
+              height={200}
+              className="size-full"
+            ></Image>
           </figure>
           <div className="animate-fadein space-y-4">
             <h1 className="text-3xl font-bold tracking-tight text-foreground">
@@ -43,13 +51,13 @@ export default function Home() {
               using OpenAI's API 👨🏽‍💻
             </p>
 
-            <div className="landing__socials flex items-center gap-3 flex-wrap">
+            <div className="landing__socials flex items-center gap-3 flex-wrap hover:brightness-75">
               {socials.map((social) => (
                 <Link
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-between gap-2 w-full max-w-40 h-10 bg-background border border-background-secondary px-4 text-foreground rounded-lg transition duration-400 shadow shadow-background-secondary group transform animate-fadein"
+                  className="flex items-center justify-between gap-2 w-full max-w-40 h-12 bg-background border border-background-secondary px-4 text-foreground rounded-lg transition duration-400 shadow shadow-background-secondary group transform animate-fadein hover:brightness-100"
                   key={social.href}
                 >
                   <p className="flex items-center gap-2">
