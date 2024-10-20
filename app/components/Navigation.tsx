@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import Logo from "./ui/Logo";
 import clsx from "clsx";
 
-import ThemeSwitcher from "./ui/ThemeSwitcher";
+import ThemeSwitcher from "./ThemeSwitcher";
 import PopoverMenu from "./PopoverMenu";
 
 const links = [
@@ -21,7 +21,7 @@ const Navigation = () => {
   const pathname = `/${usePathname().split("/")[1]}`;
 
   return (
-    <header className="flex items-center justify-between py-5 px-6 md:px-4 max-w-3xl mx-auto sticky top-0 z-50 bg-background">
+    <header className="flex items-center justify-between py-5 px-6 md:px-4 max-w-3xl mx-auto">
       <Logo />
 
       <nav className="flex justify-between items-center gap-5">
@@ -30,9 +30,9 @@ const Navigation = () => {
             <li key={link.href}>
               <Link
                 className={clsx(
-                  "px-4 py-2 rounded-lg text-sm hover:text-foreground transition-all duration-150",
+                  "px-4 py-2 rounded-lg text-sm dark:hover:text-primary-dark transition",
                   pathname === link.href
-                    ? "bg-background-secondary"
+                    ? "bg-background-secondary dark:bg-background-secondary-dark"
                     : "dark:text-white/50"
                 )}
                 href={link.href}

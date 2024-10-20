@@ -6,13 +6,18 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
+        background: "#ffffff",
+        "background-dark": "var(--background-dark)",
         "background-secondary": "var(--background-secondary)",
-        foreground: "var(--foreground)",
+        "background-secondary-dark": "var(--background-secondary-dark)",
+        primary: "var(--foreground)",
+        "primary-dark": "var(--foreground-dark)",
         secondary: "var(--foreground-secondary)",
+        "secondary-dark": "var(--foreground-secondary-dark)",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
