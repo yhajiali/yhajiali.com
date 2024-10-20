@@ -31,45 +31,49 @@ export default function Home() {
   return (
     <>
       <section className="space-y-12">
-        <div className="animate-fadein space-y-5">
-          <figure className="animate-popout size-16 md:size-20 rounded-full overflow-hidden object-cover">
-            <Image
-              src={avatar}
-              alt="Yusuf Haji Ali"
-              width={200}
-              height={200}
-              className="size-full"
-            ></Image>
-          </figure>
-          <div className="animate-fadein space-y-4">
-            <h1 className="text-3xl font-bold tracking-tight text-foreground">
-              I'm Yusuf Haji Ali.
-            </h1>
-            <p className="max-w-xl text-secondary">
-              I'm a 26 year old Software Engineer based in the UK. Currently
-              exploring new AI technologies, I've started by building projects
-              using OpenAI's API 👨🏽‍💻
-            </p>
+        <div className="animate-fadein flex ">
+          <div className="space-y-5">
+            <figure className="animate-popout size-16 md:size-20 rounded-full overflow-hidden object-cover">
+              <Image
+                src={avatar}
+                alt="Yusuf Haji Ali"
+                width={200}
+                height={200}
+                className="size-full"
+              ></Image>
+            </figure>
+            <div className="animate-fadein space-y-4 max-w-xl">
+              <h1 className="text-3xl font-bold tracking-tight">
+                I'm Yusuf Haji Ali.
+              </h1>
+              <p>
+                I'm a 26 year old Software Engineer based in the UK. Currently
+                I’m exploring AI technologies like OpenAI's API models and
+                applying my learning through cool personal projects. 👨🏽‍💻
+              </p>
+            </div>
 
-            <div className="landing__socials flex items-center gap-3 flex-wrap hover:brightness-75">
+            <ul className="flex items-center gap-3 flex-wrap animated-list transition animate-fadein">
               {socials.map((social) => (
-                <Link
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center justify-between gap-2 w-full max-w-40 h-12 bg-background border border-background-secondary px-4 text-foreground rounded-lg transition duration-400 shadow shadow-background-secondary group transform animate-fadein hover:brightness-100"
+                <li
+                  className="flex w-full max-w-40 h-12 border dark:border-background-secondary-dark px-4 rounded-lg duration shadow dark:hover:shadow-background-secondary-dark transition-opacity"
                   key={social.href}
                 >
-                  <p className="flex items-center gap-2">
-                    <social.icon className="text-base text-foreground" />
-                    <span className="text-sm font-medium font-main text-secondary group-hover:text-foreground transition-colors">
-                      {social.label}
-                    </span>
-                  </p>
-                  <ArrowUpRightIcon className="size-3 group-hover:text-foreground" />
-                </Link>
+                  <Link
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-between gap-2 w-full dark:text-primary-dark text-sm font-medium"
+                  >
+                    <div className="flex items-center gap-2">
+                      <social.icon className="text-base" />
+                      <span className="">{social.label}</span>
+                    </div>
+                    <ArrowUpRightIcon className="size-3" />
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
 
@@ -77,21 +81,17 @@ export default function Home() {
           <div className="relative">
             <Map lng={-2.244644} lat={53.483959} />
             <div className="absolute bottom-4 left-4 flex items-center rounded-lg bg-neutral-100/75 px-4 py-1.5 backdrop-blur dark:bg-neutral-900/75 md:bottom-6 md:left-6">
-              <p className="text-sm font-medium text-primary">Manchester, UK</p>
-            </div>
-          </div>
-          <div className="relative">
-            <Map lng={-2.244644} lat={53.483959} />
-            <div className="absolute bottom-4 left-4 flex items-center rounded-lg bg-neutral-100/75 px-4 py-1.5 backdrop-blur dark:bg-neutral-900/75 md:bottom-6 md:left-6">
-              <p className="text-sm font-medium text-primary">Manchester, UK</p>
+              <p className="text-sm font-medium text-primary dark:text-primary-dark">
+                Manchester, UK
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="text-secondary animate-fadein space-y-6">
+      <section className="animate-fadein space-y-6">
         <div className="space-y-3">
-          <h2 className="text-x text-foreground">Ongoing Projects</h2>
+          <h2>Ongoing Projects</h2>
           <p className="max-w-xl">
             Some of my current passion projects. I'm always keen to listen to
             feedback (I've still got much to learn!)
@@ -111,9 +111,7 @@ export default function Home() {
                 />
               </figure>
               <div className="space-y-1">
-                <p className="font-medium leading-tight text-foreground">
-                  Project 1
-                </p>
+                <h3 className="font-medium leading-tight">Sunnah Journeys</h3>
                 <p className="text-secondary">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
                   velit, totam beatae blanditiis suscipit repudiandae.
@@ -133,9 +131,7 @@ export default function Home() {
                 />
               </figure>
               <div className="space-y-1">
-                <p className="font-medium leading-tight text-foreground">
-                  Project 2
-                </p>
+                <h3 className="font-medium leading-tight">My Library</h3>
                 <p className="text-secondary">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
                   velit, totam beatae blanditiis suscipit repudiandae.
@@ -146,14 +142,14 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className="space-y-3 text-secondary">
-        <h2 className="text-x text-foreground">Get in touch!</h2>
+      <section className="space-y-3">
+        <h2>Get in touch!</h2>
         <p className="max-w-xl">
           Need more details, or interested in working together? Reach out at any
           of my{" "}
           <Link
             href="/links"
-            className="underline underline-offset-4 hover:text-foreground transition-colors duration-200"
+            className="underline underline-offset-4 hover:text-primary dark:hover:text-primary-dark transition-colors duration-200"
           >
             links
           </Link>

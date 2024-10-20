@@ -4,23 +4,21 @@
 
 :root {
   --background: #ffffff;
+  --background-dark: #0a0a0a;
   --background-secondary: #f0f0f0;
+  --background-secondary-dark: #191919;
   --foreground: #171717;
+  --foreground-dark: #ededed;
   --foreground-secondary: #646464;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --background-secondary: #191919;
-    --foreground: #ededed;
-    --foreground-secondary: #b4b4b4;
-  }
+  --foreground-secondary-dark: #b4b4b4;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  @apply font-sans text-[#171717] dark:text-[#ededed] dark:bg-[#0a0a0a];
+}
+
+p {
+  @apply text-secondary dark:text-secondary-dark;
 }
 
 /* Map styles */
@@ -36,6 +34,16 @@ body {
   background-color: rgb(59 130 246);
   transform: translate(-50%, -50%);
   border: 3px solid rgba(255, 255, 255, 0.95);
+}
+
+@media (hover: hover) {
+  .animated-list:hover li {
+    opacity: 0.5;
+  }
+
+  .animated-list:hover li:hover {
+    opacity: 1;
+  }
 }
 
 @layer utilities {

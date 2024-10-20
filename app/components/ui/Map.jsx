@@ -14,17 +14,14 @@ export default function Map({ lng, lat, zoom = 5, pitch = 30, time = null }) {
 
   const { resolvedTheme } = useTheme();
   let mapTheme;
-  if (resolvedTheme === "dark") {
-    mapTheme = "night";
-  } else if (resolvedTheme === "light") {
-    mapTheme = "light";
-  }
+  mapTheme = resolvedTheme === "dark" ? "night" : "light";
 
   if (time) {
     mapTheme = time;
   }
 
   useEffect(() => {
+    console;
     if (map.current) return;
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
@@ -35,7 +32,7 @@ export default function Map({ lng, lat, zoom = 5, pitch = 30, time = null }) {
 
     // set config properties
     map.current.on("style.load", () => {
-      map.current.setConfigProperty("basemap", "lightPreset", "night");
+      map.current.setConfigProperty("basemap", "lightPreset", mapTheme);
       map.current.setPadding({ left: 100 });
 
       const el = document.createElement("span");
@@ -48,7 +45,7 @@ export default function Map({ lng, lat, zoom = 5, pitch = 30, time = null }) {
   });
 
   return (
-    <div className="overflow-clip rounded-xl border border-background-secondary h-48 md:h-64 w-full">
+    <div className="overflow-clip rounded-xl border dark:border-background-secondary-dark h-48 w-full">
       <div ref={mapContainer} className="map-container size-full" />
     </div>
   );

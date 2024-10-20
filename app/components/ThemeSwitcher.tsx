@@ -21,9 +21,10 @@ const ThemeSwitcher = () => {
       <MenuButton className="hover:cursor-pointer">
         {({ active }) => {
           const iconClassName = clsx(
-            "size-5 text-secondary hover:text-foreground cursor-pointer transition-colors",
+            "size-5 text-secondary dark:text-white/70 hover:text-foreground cursor-pointer transition-colors",
             active ? "text-foreground" : "text-secondary"
           );
+
           return resolvedTheme === "dark" ? (
             <MoonIcon className={iconClassName} />
           ) : (
@@ -35,7 +36,7 @@ const ThemeSwitcher = () => {
       <MenuItems
         transition
         anchor="bottom end"
-        className="w-36 mt-3 shadow-md origin-top-right rounded-xl border dark:border-white/5 bg-background dark:bg-background-secondary p-1 text-sm/6 text-foreground transition duration-150 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0 z-50"
+        className="w-36 mt-3 shadow-md origin-top-right rounded-xl border dark:border-white/5 bg-background dark:bg-background-secondary-dark p-1 text-sm/6 text-foreground transition duration-150 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0 z-50"
       >
         {themes.map((themeOption) => (
           <MenuItem key={themeOption}>
