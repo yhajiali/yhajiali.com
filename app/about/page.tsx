@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "A glimpse into me, my skills and experience in software development.",
 };
 
-export default function About() {
+const About = () => {
   return (
     <div className="flex flex-col gap-16 md:gap-24">
       <div>
@@ -110,7 +110,9 @@ export default function About() {
       </div>
     </div>
   );
-}
+};
+
+export default About;
 
 const experience = [
   {

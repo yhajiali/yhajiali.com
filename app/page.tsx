@@ -112,7 +112,7 @@ export default function Home() {
               </figure>
               <div className="space-y-1">
                 <h3 className="font-medium leading-tight">Sunnah Journeys</h3>
-                <p className="text-secondary">
+                <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
                   velit, totam beatae blanditiis suscipit repudiandae.
                 </p>
@@ -132,7 +132,7 @@ export default function Home() {
               </figure>
               <div className="space-y-1">
                 <h3 className="font-medium leading-tight">My Library</h3>
-                <p className="text-secondary">
+                <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
                   velit, totam beatae blanditiis suscipit repudiandae.
                 </p>
