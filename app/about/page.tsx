@@ -1,16 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Metadata } from "next";
 
-import {
-  FaExternalLinkAlt,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-} from "react-icons/fa";
-import Link from "next/link";
-import { FaXTwitter } from "react-icons/fa6";
-import { ArrowUpRightIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 import Heading from "../components/ui/Heading";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+
+import { socials } from "../lib/links";
 
 export const metadata: Metadata = {
   title: "Yusuf Haji Ali | About",
@@ -118,38 +114,5 @@ const experience = [
     time: "",
     imageSrc: "",
     link: "",
-  },
-];
-
-const socials = [
-  {
-    href: "https://www.linkedin.com/in/yhajiali",
-    icon: EnvelopeIcon,
-    label: "Email",
-  },
-  {
-    href: "https://www.linkedin.com/in/yhajiali",
-    icon: FaLinkedin,
-    label: "LinkedIn",
-  },
-  {
-    href: "https://www.x.com/yhajiali_",
-    icon: FaXTwitter,
-    label: "Twitter",
-  },
-  {
-    href: "https://www.linkedin.com/in/yhajiali",
-    icon: FaInstagram,
-    label: "Instagram",
-  },
-  {
-    href: "https://www.github.com/yhajiali",
-    icon: FaGithub,
-    label: "Github",
-  },
-  {
-    href: "https://www.linkedin.com/in/yhajiali",
-    icon: FaLinkedin,
-    label: "LinkedIn",
   },
 ];

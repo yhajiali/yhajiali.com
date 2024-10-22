@@ -40,7 +40,7 @@ const config: Config = {
         },
       },
       animation: {
-        popout: "popout 0.4s 0.7s ease backwards",
+        popout: "popout 0.4s 0.6s ease backwards",
         fadein: "fadein .6s both",
       },
     },

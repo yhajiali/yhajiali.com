@@ -26,13 +26,13 @@ const Projects = () => {
         subtitle="Explore my latest personal projects"
       />
 
-      <ul className="animated-list space-y-10 animate-fadein">
+      <ul className="animated-list space-y-10 animate-fadein max-w-xl">
         <li className="transition-opacity">
           <Link
             className="underline-offset-4 space-y-4 sm:fle gap-5"
             href="/projects/"
           >
-            <figure className="aspect-video overflow-hidden rounded-md max-w-xl">
+            <figure className="aspect-video overflow-hidden rounded-md">
               <Image
                 alt="Project 1"
                 className="size-full object-cover"

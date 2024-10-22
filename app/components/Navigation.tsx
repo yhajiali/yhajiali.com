@@ -10,12 +10,7 @@ import clsx from "clsx";
 import ThemeSwitcher from "./ThemeSwitcher";
 import PopoverMenu from "./PopoverMenu";
 
-const links = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Projects", href: "/projects" },
-  { label: "Contact", href: "/contact" },
-];
+import { navLinks } from "../lib/links";
 
 const Navigation = () => {
   const pathname = `/${usePathname().split("/")[1]}`;
@@ -26,7 +21,7 @@ const Navigation = () => {
 
       <nav className="flex justify-between items-center gap-5">
         <ul className="hidden md:flex items-center gap-2">
-          {links.map((link) => (
+          {navLinks.map((link) => (
             <li key={link.href}>
               <Link
                 className={clsx(
@@ -45,7 +40,7 @@ const Navigation = () => {
 
         <div className="flex items-center gap-4">
           <ThemeSwitcher />
-          <PopoverMenu links={links} pathname={pathname} />
+          <PopoverMenu links={navLinks} pathname={pathname} />
         </div>
       </nav>
     </header>

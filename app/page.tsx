@@ -3,31 +3,12 @@ import Image from "next/image";
 
 import Map from "./components/ui/Map";
 
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { socials } from "./lib/links";
 
 import avatar from "@/public/avatar.jpeg";
 
 export default function Home() {
-  const socials = [
-    {
-      href: "https://www.linkedin.com/in/yhajiali",
-      icon: FaLinkedin,
-      label: "LinkedIn",
-    },
-    {
-      href: "https://www.x.com/yhajiali_",
-      icon: FaXTwitter,
-      label: "Twitter",
-    },
-    {
-      href: "https://www.github.com/yhajiali",
-      icon: FaGithub,
-      label: "Github",
-    },
-  ];
-
   return (
     <>
       <section className="space-y-12">
@@ -54,25 +35,29 @@ export default function Home() {
             </div>
 
             <ul className="flex items-center gap-3 flex-wrap animated-list transition animate-fadein">
-              {socials.map((social) => (
-                <li
-                  className="flex w-full max-w-40 h-12 border dark:border-background-secondary-dark px-4 rounded-lg duration shadow dark:hover:shadow-background-secondary-dark transition-opacity"
-                  key={social.href}
-                >
-                  <Link
-                    href={social.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center justify-between gap-2 w-full dark:text-primary-dark text-sm font-medium"
+              {socials
+                .filter((social) =>
+                  ["LinkedIn", "Twitter", "Github"].includes(social.label)
+                )
+                .map((social) => (
+                  <li
+                    className="flex w-full max-w-40 h-12 border dark:border-background-secondary-dark px-4 rounded-lg duration shadow dark:hover:shadow-background-secondary-dark transition-opacity"
+                    key={social.href}
                   >
-                    <div className="flex items-center gap-2">
-                      <social.icon className="text-base" />
-                      <span className="">{social.label}</span>
-                    </div>
-                    <ArrowUpRightIcon className="size-3" />
-                  </Link>
-                </li>
-              ))}
+                    <Link
+                      href={social.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center justify-between gap-2 w-full dark:text-primary-dark text-sm font-medium"
+                    >
+                      <div className="flex items-center gap-2">
+                        <social.icon className="text-base" />
+                        <span className="">{social.label}</span>
+                      </div>
+                      <ArrowUpRightIcon className="size-3" />
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </div>
         </div>
