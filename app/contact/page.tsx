@@ -7,16 +7,14 @@ import ContactForm from "../components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Yusuf Haji Ali | Contact",
-  description: "Explore my latest personal Contact.",
+  description:
+    "Get in touch with me to discuss opportunities, collaborations, or just have a chat!",
 };
 
 const Contact = () => {
   return (
     <section className="space-y-10">
-      <Heading
-        title="Contact"
-        subtitle="Let's have a chat, I would love to hear from you."
-      />
+      <Heading title="Contact" subtitle="I would love to hear from you." />
 
       <ContactForm />
 
