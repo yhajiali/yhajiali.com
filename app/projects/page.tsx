@@ -11,6 +11,7 @@ import {
   SiTypescript,
   SiUpstash,
 } from "react-icons/si";
+import Heading from "../components/ui/Heading";
 
 export const metadata: Metadata = {
   title: "Yusuf Haji Ali | Projects",
@@ -20,22 +21,18 @@ export const metadata: Metadata = {
 const Projects = () => {
   return (
     <section className="space-y-10">
-      <div>
-        <h1 className="animate-fadein text-3xl font-bold tracking-tight">
-          Projects
-        </h1>
-        <p className="animate-fadein text-secondary">
-          Explore my latest personal projects.
-        </p>
-      </div>
+      <Heading
+        title="Projects"
+        subtitle="Explore my latest personal projects"
+      />
 
       <ul className="animated-list space-y-10 animate-fadein">
         <li className="transition-opacity">
           <Link
-            className="underline-offset-4 space-y-4 sm:flex gap-5"
+            className="underline-offset-4 space-y-4 sm:fle gap-5"
             href="/projects/"
           >
-            <figure className="aspect-video overflow-hidden rounded-md">
+            <figure className="aspect-video overflow-hidden rounded-md max-w-xl">
               <Image
                 alt="Project 1"
                 className="size-full object-cover"
@@ -50,6 +47,7 @@ const Projects = () => {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
                 velit, totam beatae blanditiis suscipit repudiandae.
               </p>
+
               <div className="flex gap-4 pt-4">
                 {techstack.map((tech) => (
                   <tech.icon className="size-6" key={tech.label} />

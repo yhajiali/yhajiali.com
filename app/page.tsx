@@ -145,8 +145,8 @@ export default function Home() {
       <section className="space-y-3">
         <h2>Get in touch!</h2>
         <p className="max-w-xl">
-          Need more details, or interested in working together? Reach out at any
-          of my{" "}
+          Need more details, or interested in working together? Reach out to me
+          at any of my{" "}
           <Link
             href="/links"
             className="underline underline-offset-4 hover:text-primary dark:hover:text-primary-dark transition-colors duration-200"

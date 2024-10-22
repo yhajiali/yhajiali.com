@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
 import { ArrowUpRightIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
+import Heading from "../components/ui/Heading";
 
 export const metadata: Metadata = {
   title: "Yusuf Haji Ali | About",
@@ -20,12 +21,8 @@ export const metadata: Metadata = {
 const About = () => {
   return (
     <div className="flex flex-col gap-16 md:gap-24">
-      <div>
-        <h1 className="animate-fadein text-3xl font-bold tracking-tight">
-          About
-        </h1>
-        <p className="animate-fadein text-secondary">A glimpse into me.</p>
-      </div>
+      <Heading title="About" subtitle="A glimpse into me." />
+
       <div className="mb-8 md:hidden">
         <div className="animate-fadein">
           <Image
