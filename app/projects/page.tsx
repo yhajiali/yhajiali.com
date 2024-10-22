@@ -7,18 +7,22 @@ import Heading from "../components/ui/Heading";
 import { projects } from "../lib/projects";
 import CTA from "../components/ui/CTA";
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 export const metadata: Metadata = {
   title: "Yusuf Haji Ali | Projects",
-  description: "Explore my latest personal projects.",
+  description: "Explore some of my latest projects.",
 };
 
 const Projects = () => {
   return (
     <>
-      <Heading
-        title="Projects"
-        subtitle="Explore my latest personal projects"
-      />
+      <Heading title="Projects" subtitle="Explore some of my latest projects" />
 
       <section>
         <ul className="animated-list space-y-10 animate-fadein max-w-xl">
@@ -42,8 +46,17 @@ const Projects = () => {
                   <p>{project.desc}</p>
 
                   <div className="flex gap-4 pt-4">
-                    {project.techstack.map((tech) => (
-                      <tech.icon className="size-6" key={tech.label} />
+                    {project.techstack.map((tech, index) => (
+                      <TooltipProvider key={index}>
+                        <Tooltip>
+                          <TooltipTrigger>
+                            <tech.icon className="size-6" />
+                          </TooltipTrigger>
+                          <TooltipContent className="bg-background dark:bg-background-secondary-dark dark:border-background-secondary-dark">
+                            {tech.label}
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     ))}
                   </div>
                 </div>
