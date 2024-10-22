@@ -91,7 +91,7 @@ export default function Home() {
                 <Image
                   alt="Project 1"
                   className="size-full object-cover"
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
+                  src="/projects/sunnahjourneys.png"
                   width={400}
                   height={300}
                 />

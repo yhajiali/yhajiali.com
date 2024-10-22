@@ -36,7 +36,7 @@ const ContactForm = () => {
           placeholder={"💼 I have a great opportunity for you..."}
           textarea
         />
-        <button className="w-full px-4 py-2 text-white font-medium bg-blue-600 hover:bg-blue-500 active:bg-blue-600 rounded-lg duration-150">
+        <button className="w-full px-4 py-2 text-white font-medium bg-blue-500 hover:bg-blue-400 active:bg-blue-600 rounded-lg duration-150">
           Send
         </button>
       </div>

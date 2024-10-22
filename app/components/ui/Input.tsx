@@ -17,6 +17,8 @@ const Input = ({
   textareaRows = 3,
   type,
 }: Props) => {
+  const inputClass =
+    "outline-none bg-transparent border-x-0 border-t-0 border-2 w-full py-2 focus:border-blue-500 dark:placeholder:text-secondary-dark dark:border-white/50 dark:focus:border-blue-500 transition-all duration-300";
   return (
     <div className="animate-fadein">
       <label htmlFor={id} className="font-medium">
@@ -25,7 +27,7 @@ const Input = ({
 
       {textarea ? (
         <textarea
-          className="outline-none bg-transparent border-x-0 border-t-0 border-2 w-full py-2 focus:border-blue-400 transition-all duration-300"
+          className={inputClass}
           id={id}
           placeholder={placeholder}
           required
@@ -34,7 +36,7 @@ const Input = ({
       ) : (
         <input
           type={type}
-          className="outline-none bg-transparent border-x-0 border-t-0 border-2 w-full py-2 focus:border-blue-400 transition-all duration-300"
+          className={inputClass}
           id={id}
           placeholder={placeholder}
           required

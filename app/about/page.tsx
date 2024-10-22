@@ -16,31 +16,31 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <div className="flex flex-col gap-16 md:gap-24">
+    <div className="space-y-16  md:space-y-24">
       <Heading title="About" subtitle="A glimpse into me." />
 
       <div className="mb-8 md:hidden">
-        <div className="animate-fadein">
+        <figure className="animate-fadein">
           <Image
-            src={"https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"}
-            alt={"me and lily"}
+            src={"/gallery/koprulu-canyon.jpg"}
+            alt={"Me at the Köprülü Canyon"}
             width={324}
             height={139}
-            className="pointer-events-none relative inset-0 h-60 -rotate-6 rounded-xl bg-gray-400 object-cover shadow-md"
+            className="pointer-events-none relative inset-0 h-60 -rotate-6 rounded-xl bg-gray-400 object-cover object-bottom shadow-md w-64 sm:w-80 sm:h-72"
             priority
           />
-        </div>
+        </figure>
 
-        <div className="animate-fadein">
+        <figure className="animate-fadein">
           <Image
-            src={"https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"}
-            alt={"me and lily"}
+            src={"/gallery/wimmy.jpg"}
+            alt={""}
             width={220}
             height={260}
-            className="pointer-events-none absolute inset-0 -top-48 left-[45%] w-48 rotate-6 rounded-xl bg-gray-400 object-cover shadow-md md:left-[60%] md:w-56"
+            className="pointer-events-none absolute inset-0 -top-48 left-[45%] w-48 h-60 rotate-6 rounded-xl bg-gray-400 shadow-md"
             priority
           />
-        </div>
+        </figure>
       </div>
 
       <div className="flex animate-fadein flex-col gap-16 md:gap-24">
@@ -54,8 +54,9 @@ const About = () => {
             completing a Bachelor of Science Honours in Software Engineering.
           </p>
           <p>
-            After leaving university, I joined an AI bootcamp and within 2 weeks
-            of starting I was able to develop and deploy my first full-stack AI{" "}
+            After leaving university, I joined an AI bootcamp and within a few
+            weeks of starting, I was able to develop and deploy my first
+            full-stack AI{" "}
             <Link
               href="http://logoist.vercel.app"
               className="inline-flex items-center gap-1 font-semibold text-primary dark:text-primary-dark hover:underline underline-offset-4"
@@ -65,6 +66,10 @@ const About = () => {
               <FaExternalLinkAlt className="size-3" />
             </Link>{" "}
             with no prior experience in AI Technologies.
+          </p>
+          <p>
+            I specialise in full-stack web development using TypeScript, React,
+            Tailwind, Next.js and more. But I am always learning new things.
           </p>
           <p>
             <span className="font-semibold text-primary dark:text-primary-dark">
@@ -95,11 +100,6 @@ const About = () => {
             </li>
           ))}
         </ul>
-
-        <p>
-          I specialise in full-stack web development using TypeScript, React,
-          Tailwind, Next.js and more. But I am always learning new things.
-        </p>
       </div>
     </div>
   );

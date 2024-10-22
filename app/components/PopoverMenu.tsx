@@ -16,7 +16,7 @@ const PopoverMenu = ({ links, pathname }: Props) => {
   return (
     <div className="md:hidden flex">
       <Menu>
-        <MenuButton className="hover:cursor-pointer">
+        <MenuButton className="hover:cursor-pointer outline-none ring-0">
           {({ active }) => <BarsButton menuOpen={active} />}
         </MenuButton>
 

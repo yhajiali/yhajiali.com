@@ -15,6 +15,7 @@ type Project = {
   cover: string;
   title: string;
   desc: string;
+  status?: "ongoing" | "complete";
   techstack: {
     icon: React.ComponentType<{ className?: string }>;
     label: string;
@@ -23,6 +24,7 @@ type Project = {
 
 export const projects: Project[] = [
   {
+    status: "complete",
     cover: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
     title: "Logoist",
     desc: "An AI powered app that creates minimalistic logos based on 3 trendy styles.",
@@ -54,6 +56,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    status: "complete",
     cover: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
     title: "WhatsThat",
     desc: "A native messaging platform developed with React Native and Expo.",
