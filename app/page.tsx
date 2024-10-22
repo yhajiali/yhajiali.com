@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Map from "./components/ui/Map";
+import CTA from "./components/ui/CTA";
 
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { socials } from "./lib/links";
@@ -127,20 +128,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className="space-y-3">
-        <h2>Get in touch!</h2>
-        <p className="max-w-xl">
-          Need more details, or interested in working together? Reach out to me
-          at any of my{" "}
-          <Link
-            href="/links"
-            className="underline underline-offset-4 hover:text-primary dark:hover:text-primary-dark transition-colors duration-200"
-          >
-            links
-          </Link>
-          . I'd be happy to connect!
-        </p>
-      </section>
+      <CTA />
     </>
   );
 }
