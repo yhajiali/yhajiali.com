@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const CTA = () => {
   return (
-    <section className="space-y-3">
+    <section className="space-y-3 animate-fadein">
       <h2>Get in touch!</h2>
       <p className="max-w-xl">
         Need more details, or interested in working together? Reach out to me at

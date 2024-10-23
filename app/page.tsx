@@ -7,7 +7,7 @@ import CTA from "./components/ui/CTA";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { socials } from "./lib/links";
 
-import avatar from "@/public/avatar.jpeg";
+import Avatar from "./components/ui/Avatar";
 import { projects } from "./lib/projects";
 
 export default function Home() {
@@ -16,15 +16,7 @@ export default function Home() {
       <section className="space-y-12">
         <div className="animate-fadein flex ">
           <div className="space-y-5">
-            <figure className="animate-popout size-16 md:size-20 rounded-full overflow-hidden object-cover">
-              <Image
-                src={avatar}
-                alt="Yusuf Haji Ali"
-                width={200}
-                height={200}
-                className="size-full"
-              ></Image>
-            </figure>
+            <Avatar />
             <div className="animate-fadein space-y-4 max-w-xl">
               <h1 className="text-3xl font-bold tracking-tight">
                 I'm Yusuf Haji Ali.
