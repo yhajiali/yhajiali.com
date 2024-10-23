@@ -25,7 +25,7 @@ type Project = {
 export const projects: Project[] = [
   {
     status: "complete",
-    cover: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+    cover: "logoist.png",
     title: "Logoist",
     desc: "An AI powered app that creates minimalistic logos based on 3 trendy styles.",
     techstack: [
@@ -57,9 +57,49 @@ export const projects: Project[] = [
   },
   {
     status: "complete",
-    cover: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+    cover: "whatsthat.png",
     title: "WhatsThat",
     desc: "A native messaging platform developed with React Native and Expo.",
+    techstack: [
+      {
+        icon: SiJavascript,
+        label: "JavaScript",
+      },
+      {
+        icon: TbBrandReactNative,
+        label: "React Native",
+      },
+      {
+        icon: SiAxios,
+        label: "Axios",
+      },
+    ],
+  },
+  {
+    status: "ongoing",
+    cover: "sunnahjourneys.png",
+    title: "Sunnah Journeys",
+    desc: "Transform your Umrah experience with our intuitive web app, offering all the necessary information and tools to help you book with confidence.",
+    techstack: [
+      {
+        icon: SiJavascript,
+        label: "JavaScript",
+      },
+      {
+        icon: TbBrandReactNative,
+        label: "React Native",
+      },
+      {
+        icon: SiAxios,
+        label: "Axios",
+      },
+    ],
+  },
+  {
+    status: "ongoing",
+    cover: "mylibrary.png",
+    title: "My Library",
+    desc: "A comprehensive reading list app that allows you to effortlessly track books you've read, are currently reading, and plan to read.",
     techstack: [
       {
         icon: SiJavascript,

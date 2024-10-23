@@ -8,6 +8,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { socials } from "./lib/links";
 
 import avatar from "@/public/avatar.jpeg";
+import { projects } from "./lib/projects";
 
 export default function Home() {
   return (
@@ -85,46 +86,32 @@ export default function Home() {
         </div>
 
         <ul className="animated-list flex flex-nowrap snap-x snap-mandatory gap-6 overflow-x-scroll md:grid grid-cols-2 md:overflow-auto no-scrollbar">
-          <li className="col-span-1 min-w-72 snap-start transition-opacity">
-            <Link className="underline-offset-4 space-y-4" href="/">
-              <figure className="aspect-video overflow-hidden rounded-md bg-secondary">
-                <Image
-                  alt="Project 1"
-                  className="size-full object-cover"
-                  src="/projects/sunnahjourneys.png"
-                  width={400}
-                  height={300}
-                />
-              </figure>
-              <div className="space-y-1">
-                <h3 className="font-medium leading-tight">Sunnah Journeys</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
-                  velit, totam beatae blanditiis suscipit repudiandae.
-                </p>
-              </div>
-            </Link>
-          </li>
-          <li className="col-span-1 min-w-72 snap-start transition-opacity">
-            <Link className="underline-offset-4 space-y-4" href="/">
-              <figure className="aspect-video overflow-hidden rounded-md bg-secondary">
-                <Image
-                  alt="Project 2"
-                  className="size-full object-cover"
-                  src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg"
-                  width={400}
-                  height={300}
-                />
-              </figure>
-              <div className="space-y-1">
-                <h3 className="font-medium leading-tight">My Library</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
-                  velit, totam beatae blanditiis suscipit repudiandae.
-                </p>
-              </div>
-            </Link>
-          </li>
+          {projects
+            .filter((project) => project.status === "ongoing")
+            .map((project, index) => (
+              <li
+                key={index}
+                className="col-span-1 min-w-72 snap-start transition-opacity"
+              >
+                <Link className="underline-offset-4 space-y-4" href="/">
+                  <figure className="aspect-video overflow-hidden rounded-md bg-secondary">
+                    <Image
+                      alt="Project 1"
+                      className="size-full object-cover"
+                      src={`/projects/${project.cover}`}
+                      width={400}
+                      height={300}
+                    />
+                  </figure>
+                  <div className="space-y-1">
+                    <h3 className="font-medium leading-tight">
+                      {project.title}
+                    </h3>
+                    <p>{project.desc}</p>
+                  </div>
+                </Link>
+              </li>
+            ))}
         </ul>
       </section>
 
