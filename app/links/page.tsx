@@ -14,14 +14,14 @@ const Links = () => {
           <p>Software Engineer.</p>
         </div>
       </div>
-      <p className="max-w-sm mx-auto">
+      <p className="animate-fadein max-w-sm mx-auto">
         Here are my socials and ways to connect with me. Feel free to reach out!
       </p>
       <ul className="grid grid-cols-1 gap-3 animated-list transition animate-fadein">
-        {socials.map((social) => (
+        {socials.map((social, index) => (
           <li
             className="flex w-full h-14 border dark:border-background-secondary-dark px-4 rounded-lg duration shadow dark:hover:shadow-background-secondary-dark transition-opacity "
-            key={social.href}
+            key={index}
           >
             <Link
               href={social.href}

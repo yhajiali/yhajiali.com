@@ -15,6 +15,7 @@ type Project = {
   cover: string;
   title: string;
   desc: string;
+  href?: string;
   status?: "ongoing" | "complete";
   techstack: {
     icon: React.ComponentType<{ className?: string }>;
@@ -79,6 +80,7 @@ export const projects: Project[] = [
     status: "ongoing",
     cover: "sunnahjourneys.png",
     title: "Sunnah Journeys",
+    href: "https://sunnahjourneys.vercel.app",
     desc: "Transform your Umrah experience with our intuitive web app, offering all the necessary information and tools to help you book with confidence.",
     techstack: [
       {
@@ -99,6 +101,7 @@ export const projects: Project[] = [
     status: "ongoing",
     cover: "mylibrary.png",
     title: "My Library",
+    href: "https://yh-mylibrary.vercel.app",
     desc: "A comprehensive reading list app that allows you to effortlessly track books you've read, are currently reading, and plan to read.",
     techstack: [
       {

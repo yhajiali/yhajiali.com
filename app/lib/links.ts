@@ -5,7 +5,7 @@ import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
 export const socials = [
   {
-    href: "https://www.linkedin.com/in/yhajiali",
+    href: "mailto:yusuf@yhajiali.com",
     icon: EnvelopeIcon,
     label: "Email",
   },
@@ -20,7 +20,7 @@ export const socials = [
     label: "Twitter",
   },
   {
-    href: "https://www.linkedin.com/in/yhajiali",
+    href: "https://www.instagram.com/yhajiali_",
     icon: FaInstagram,
     label: "Instagram",
   },

@@ -7,6 +7,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 import { socials } from "../lib/links";
+import Gallery from "./ui/Gallery";
 
 export const metadata: Metadata = {
   title: "Yusuf Haji Ali | About",
@@ -16,10 +17,10 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <div className="space-y-16  md:space-y-24">
+    <div className="space-y-16 md:space-y-24">
       <Heading title="About" subtitle="A glimpse into me." />
 
-      <div className="mb-8 md:hidden">
+      <div className="md:hidden">
         <figure className="animate-fadein">
           <Image
             src={"/gallery/koprulu-canyon.jpg"}
@@ -33,14 +34,18 @@ const About = () => {
 
         <figure className="animate-fadein">
           <Image
-            src={"/gallery/wimmy.jpg"}
-            alt={""}
+            src={"/gallery/coffeeshop.jpg"}
+            alt={"Me at a Coffeeshop in Manchester"}
             width={220}
             height={260}
             className="pointer-events-none absolute inset-0 -top-48 left-[45%] w-48 h-60 rotate-6 rounded-xl bg-gray-400 shadow-md"
             priority
           />
         </figure>
+      </div>
+
+      <div className="hidden md:block px-10">
+        <Gallery />
       </div>
 
       <div className="flex animate-fadein flex-col gap-16 md:gap-24">

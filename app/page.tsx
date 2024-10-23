@@ -85,7 +85,11 @@ export default function Home() {
                 key={index}
                 className="col-span-1 min-w-72 snap-start transition-opacity"
               >
-                <Link className="underline-offset-4 space-y-4" href="/">
+                <Link
+                  className="underline-offset-4 space-y-4"
+                  href={`${project.href}`}
+                  target="_blank"
+                >
                   <figure className="aspect-video overflow-hidden rounded-md bg-secondary">
                     <Image
                       alt="Project 1"

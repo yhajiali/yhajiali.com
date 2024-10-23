@@ -1,6 +1,6 @@
 # My Personal Website
 
-> This is my portfolio. Designed to be simplistic and clean while including features like a dark mode toggle, on-scroll animations and more.
+> This is my portfolio. Designed to be simplistic and clean while including features like a dark mode toggle, smooth animations and more.
 
 _Inspired by [Brian Ruiz](https://b-r.io/links)_
 
