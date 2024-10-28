@@ -45,7 +45,7 @@ export default function Map({ lng, lat, zoom = 5, pitch = 30, time = null }) {
   });
 
   return (
-    <div className="overflow-clip rounded-xl border dark:border-background-secondary-dark h-48 w-full">
+    <div className="overflow-clip rounded-xl border dark:border-background-secondary-dark h-48 w-full shadow-lg">
       <div ref={mapContainer} className="map-container size-full" />
     </div>
   );

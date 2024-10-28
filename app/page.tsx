@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import Avatar from "./components/ui/Avatar";
 import Map from "./components/ui/Map";
 import CTA from "./components/ui/CTA";
 
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
-import { socials } from "./lib/links";
 
-import Avatar from "./components/ui/Avatar";
+import { socials } from "./lib/links";
 import { projects } from "./lib/projects";
 
 export default function Home() {
@@ -55,15 +55,15 @@ export default function Home() {
             </ul>
           </div>
         </div>
+      </section>
 
-        <div className="animate-fadein grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div className="relative">
-            <Map lng={-2.244644} lat={53.483959} />
-            <div className="absolute bottom-4 left-4 flex items-center rounded-lg bg-neutral-100/75 px-4 py-1.5 backdrop-blur dark:bg-neutral-900/75 md:bottom-6 md:left-6">
-              <p className="text-sm font-medium text-primary dark:text-primary-dark">
-                Manchester, UK
-              </p>
-            </div>
+      <section className="animate-fadein grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="relative">
+          <Map lng={-2.244644} lat={53.483959} />
+          <div className="absolute bottom-4 left-4 flex items-center rounded-lg bg-neutral-100/75 px-4 py-1.5 backdrop-blur dark:bg-neutral-900/75 md:bottom-6 md:left-6">
+            <p className="text-sm font-medium text-primary dark:text-primary-dark">
+              Manchester, UK
+            </p>
           </div>
         </div>
       </section>
@@ -90,7 +90,7 @@ export default function Home() {
                   href={`${project.href}`}
                   target="_blank"
                 >
-                  <figure className="aspect-video overflow-hidden rounded-md bg-secondary">
+                  <figure className="aspect-video overflow-hidden rounded-md bg-secondary shadow-md">
                     <Image
                       alt="Project 1"
                       className="size-full object-cover"
