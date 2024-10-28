@@ -1,18 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Input from "./ui/Input";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [contactData, setContactData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const [contactData, setContactData] = useState({});
+  const { toast } = useToast();
+  const formRef = useRef<HTMLFormElement | null>(null);
+
+  useEffect(() => {
+    formRef.current = document.getElementById(
+      "contact-form"
+    ) as HTMLFormElement; // Accessing document in useEffect
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent default form submission behavior
@@ -25,15 +28,23 @@ const ContactForm = () => {
 
     if (response.ok) {
       // Handle successful submission
+      toast({
+        description: "Your message has been sent",
+      });
+      formRef.current?.reset();
     } else {
       // Handle error
+      toast({
+        title: "Uh oh! Something went wrong.",
+        description: "There was a problem with your request.",
+      });
     }
 
     setIsSubmitting(false);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-12">
+    <form onSubmit={handleSubmit} className="space-y-12" id="contact-form">
       <div className="flex flex-col items-center gap-y-5 gap-x-4 [&>*]:w-full sm:flex-row">
         <Input
           label="First name"
