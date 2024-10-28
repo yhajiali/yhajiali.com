@@ -144,26 +144,26 @@ export default function Gallery() {
         index={1}
       />
       <Photo
-        src={"/gallery/lake-district.jpg"}
-        meta="03-07-2021"
-        filename="Lake District Trail"
-        alt="Trail walking with the boys in Lake District"
-        width={230}
-        height={250}
-        rotate={6.3}
-        left={120}
-        index={2}
-        flipDirection="left"
-      />
-      <Photo
         src={"/gallery/me-ramli.jpg"}
         meta="27-10-2022"
         filename="Gym w/ Ramli 💪🏽"
         alt="At the Gym with Ramli"
+        width={230}
+        height={250}
+        rotate={6.3}
+        left={130}
+        index={2}
+        flipDirection="left"
+      />
+      <Photo
+        src={"/gallery/media-city.jpeg"}
+        meta="28-07-2023"
+        filename="Media City"
+        alt="Night view at Media City"
         width={280}
         height={235}
         rotate={-5.4}
-        left={320}
+        left={300}
         index={3}
       />
       <Photo

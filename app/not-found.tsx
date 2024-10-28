@@ -10,12 +10,8 @@ export const metadata: Metadata = {
 const PageNotFound = (): JSX.Element => {
   return (
     <div className="space-y-3">
-      <h3 className="font-bold text-lg dark:text-white text-foreground">
-        404 Error
-      </h3>
-      <h2 className="text-4xl font-semibold sm:text-5xl text-foreground">
-        Page not found
-      </h2>
+      <h3 className="font-bold text-lg dark:text-white text-foreground">404</h3>
+      <h2 className="text-4xl font-semibold text-foreground">Page not found</h2>
       <p className="text-secondary">
         Sorry, the page you are looking for could not be found or has been
         removed :(
