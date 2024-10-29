@@ -6,14 +6,22 @@ import Heading from "../components/ui/Heading";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-import { socials } from "../lib/links";
 import Gallery from "./ui/Gallery";
-import { experiences } from "../lib/experience";
+
+import { experiences, skills } from "../../lib/background";
+import { socials } from "../../lib/links";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const metadata: Metadata = {
   title: "Yusuf Haji Ali | About",
@@ -58,7 +66,7 @@ const About = () => {
       </section>
 
       {/* About me */}
-      <section className="space-y-8">
+      <section className="space-y-4 md:space-y-8">
         <h3 className="font-medium leading-tight">Who Am I?</h3>
         <div className="space-y-5">
           <p>
@@ -143,8 +151,72 @@ const About = () => {
         </ul>
       </section>
 
+      <section className="space-y-4 md:space-y-8 overflow-x-clip">
+        <h3 className="font-medium leading-tight">Skills</h3>
+
+        <Tabs defaultValue="coding" className="space-y-4">
+          <TabsList className="overflow-x-auto max-w-full whitespace-nowrap no-scrollbar">
+            <TabsTrigger value="coding">Coding</TabsTrigger>
+            <TabsTrigger value="Frameworks & Libraries">
+              Frameworks & Libraries
+            </TabsTrigger>
+            <TabsTrigger value="Tools & Technologies">
+              Tools & Technologies
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="coding">
+            <ul className="flex flex-wrap gap-10">
+              {skills
+                .filter((skill) => skill.type === "coding")
+                .map((skill, idx) => (
+                  <li
+                    className="transition flex flex-col items-center gap-2 text-sm animate-fadein"
+                    key={idx}
+                  >
+                    <skill.icon className="size-8" />
+                    <p>{skill.label}</p>
+                  </li>
+                ))}
+            </ul>
+          </TabsContent>
+
+          <TabsContent value="Frameworks & Libraries">
+            <ul className="flex flex-wrap gap-x-10 gap-y-6">
+              {skills
+                .filter((skill) => skill.type === "f&l")
+                .map((skill, idx) => (
+                  <li
+                    className="transition flex flex-col items-center gap-2 text-sm animate-fadein"
+                    key={idx}
+                  >
+                    <skill.icon className="size-8" />
+                    <p>{skill.label}</p>
+                  </li>
+                ))}
+            </ul>
+          </TabsContent>
+
+          <TabsContent value="Tools & Technologies">
+            <ul className="flex flex-wrap gap-10">
+              {skills
+                .filter((skill) => skill.type === "t&t")
+                .map((skill, idx) => (
+                  <li
+                    className="transition flex flex-col items-center gap-2 text-sm animate-fadein"
+                    key={idx}
+                  >
+                    <skill.icon className="size-8" />
+                    <p>{skill.label}</p>
+                  </li>
+                ))}
+            </ul>
+          </TabsContent>
+        </Tabs>
+      </section>
+
       {/* Socials */}
-      <section className="space-y-8">
+      <section className="space-y-4 md:space-y-8">
         <h3 className="font-medium leading-tight">Connect</h3>
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 animated-list transition animate-fadein">

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import Heading from "../components/ui/Heading";
-import { projects } from "../lib/projects";
+import { projects } from "../../lib/projects";
 import CTA from "../components/ui/CTA";
 
 import {

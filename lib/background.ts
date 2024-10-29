@@ -1,3 +1,26 @@
+import { FaJava } from "react-icons/fa";
+import {
+  SiClerk,
+  SiTailwindcss,
+  SiUpstash,
+  SiOpenai,
+  SiNextdotjs,
+  SiTypescript,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiPython,
+  SiReact,
+  SiGit,
+} from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
+
+type skills = {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+  type: "coding" | "f&l" | "t&t";
+};
+
 export const experiences = [
   {
     imageSrc: "codebender-ai.jpeg",
@@ -47,5 +70,73 @@ export const experiences = [
     ],
     date: "2019 - 2022",
     link: "",
+  },
+];
+
+export const skills: skills[] = [
+  {
+    icon: SiHtml5,
+    label: "HTML5",
+    type: "coding",
+  },
+  {
+    icon: SiCss3,
+    label: "CSS3",
+    type: "coding",
+  },
+  {
+    icon: SiJavascript,
+    label: "JavaScript",
+    type: "coding",
+  },
+  {
+    icon: SiTypescript,
+    label: "TypeScript",
+    type: "coding",
+  },
+  {
+    icon: FaJava,
+    label: "Java",
+    type: "coding",
+  },
+  {
+    icon: SiNextdotjs,
+    label: "Next.js",
+    type: "f&l",
+  },
+  {
+    icon: SiTailwindcss,
+    label: "Tailwind CSS",
+    type: "f&l",
+  },
+  {
+    icon: SiReact,
+    label: "REACT",
+    type: "f&l",
+  },
+  {
+    icon: TbBrandReactNative,
+    label: "REACT Native",
+    type: "f&l",
+  },
+  {
+    icon: SiGit,
+    label: "Git",
+    type: "t&t",
+  },
+  {
+    icon: SiOpenai,
+    label: "OpenAI",
+    type: "t&t",
+  },
+  {
+    icon: SiClerk,
+    label: "Clerk",
+    type: "t&t",
+  },
+  {
+    icon: SiUpstash,
+    label: "Upstash",
+    type: "t&t",
   },
 ];

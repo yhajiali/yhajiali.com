@@ -7,8 +7,8 @@ import CTA from "./components/ui/CTA";
 
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-import { socials } from "./lib/links";
-import { projects } from "./lib/projects";
+import { socials } from "../lib/links";
+import { projects } from "../lib/projects";
 
 export default function Home() {
   return (

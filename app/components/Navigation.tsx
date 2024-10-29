@@ -10,7 +10,7 @@ import clsx from "clsx";
 import ThemeSwitcher from "./ThemeSwitcher";
 import PopoverMenu from "./PopoverMenu";
 
-import { navLinks } from "../lib/links";
+import { navLinks } from "../../lib/links";
 
 const Navigation = () => {
   const pathname = `/${usePathname().split("/")[1]}`;
