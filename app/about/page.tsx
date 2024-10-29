@@ -9,6 +9,11 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { socials } from "../lib/links";
 import Gallery from "./ui/Gallery";
 import { experiences } from "../lib/experience";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 export const metadata: Metadata = {
   title: "Yusuf Haji Ali | About",
@@ -91,37 +96,49 @@ const About = () => {
         </div>
       </section>
 
+      {/* My Background */}
       <section className="space-y-10">
         <h3 className="font-medium leading-tight">My Background</h3>
+
         <ul className="animated-list space-y-6">
           {experiences.map((experience, index) => (
-            <li className="flex justify-between transition" key={index}>
-              <div className="flex gap-3">
-                <Image
-                  src={`/experience/${experience.imageSrc}`}
-                  alt={`${experience.company} logo`}
-                  className="rounded-full size-12"
-                  width={48}
-                  height={48}
-                />
-                <div>
-                  <h3 className="font-medium leading-tight">
-                    {experience.position}
-                  </h3>
-                  <p>{experience.company}</p>
-                  {/* <div className="text-secondary dark:text-secondary-dark mt-4 space-y-1">
-                    {experience.description.map((desc, idx) => (
-                      <p key={idx} className="text-sm max-w-lg">
-                        {desc}
-                      </p>
-                    ))}
-                  </div> */}
-                </div>
-              </div>
-              <span className="text-secondary dark:text-secondary-dark text-right">
-                {experience.date}
-              </span>
-            </li>
+            <div key={index}>
+              <HoverCard>
+                <HoverCardTrigger>
+                  <li className="flex justify-between transition">
+                    <div className="flex gap-3">
+                      <Image
+                        src={`/experience/${experience.imageSrc}`}
+                        alt={`${experience.company} logo`}
+                        className="rounded-full size-12"
+                        width={48}
+                        height={48}
+                      />
+                      <div>
+                        <h3 className="font-medium leading-tight">
+                          {experience.position}
+                        </h3>
+                        <p>{experience.company}</p>
+                      </div>
+                    </div>
+                    <span className="text-secondary dark:text-secondary-dark text-right">
+                      {experience.date}
+                    </span>
+                  </li>
+                </HoverCardTrigger>
+
+                <HoverCardContent className="space-y-2">
+                  {experience.description.map((desc, idx) => (
+                    <p
+                      key={idx}
+                      className="text-sm text-primary dark:text-primary-dark"
+                    >
+                      {desc}
+                    </p>
+                  ))}
+                </HoverCardContent>
+              </HoverCard>
+            </div>
           ))}
         </ul>
       </section>
