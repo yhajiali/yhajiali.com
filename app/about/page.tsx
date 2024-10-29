@@ -8,6 +8,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 import { socials } from "../lib/links";
 import Gallery from "./ui/Gallery";
+import { experiences } from "../lib/experience";
 
 export const metadata: Metadata = {
   title: "Yusuf Haji Ali | About",
@@ -17,39 +18,44 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <div className="space-y-16 md:space-y-24">
+    <main className="space-y-16 md:space-y-20">
       <Heading title="About" subtitle="A glimpse into me." />
 
-      <div className="md:hidden">
-        <figure className="animate-fadein">
-          <Image
-            src={"/gallery/koprulu-canyon.jpg"}
-            alt={"Me at the Köprülü Canyon"}
-            width={324}
-            height={139}
-            className="pointer-events-none relative inset-0 h-60 -rotate-6 rounded-xl bg-gray-400 object-cover object-bottom shadow-md w-64 sm:w-80 sm:h-72"
-            priority
-          />
-        </figure>
+      {/* Gallery */}
+      <section>
+        <div className="md:hidden">
+          <figure className="animate-fadein">
+            <Image
+              src={"/gallery/media-city.jpeg"}
+              alt="Night view at Media City"
+              width={324}
+              height={139}
+              className="pointer-events-none relative inset-0 h-60 -rotate-6 rounded-xl bg-gray-400 object-cover shadow-md w-64 sm:w-80 sm:h-72"
+              priority
+            />
+          </figure>
 
-        <figure className="animate-fadein">
-          <Image
-            src={"/gallery/coffeeshop.jpg"}
-            alt={"Me at a Coffeeshop in Manchester"}
-            width={220}
-            height={260}
-            className="pointer-events-none absolute inset-0 -top-48 left-[45%] w-48 h-60 rotate-6 rounded-xl bg-gray-400 shadow-md"
-            priority
-          />
-        </figure>
-      </div>
+          <figure className="animate-fadein">
+            <Image
+              src={"/gallery/coffeeshop.jpg"}
+              alt={"Me at a Coffeeshop in Manchester"}
+              width={220}
+              height={260}
+              className="pointer-events-none absolute inset-0 -top-48 left-[40%] w-48 h-60 rotate-6 rounded-xl bg-gray-400 shadow-md"
+              priority
+            />
+          </figure>
+        </div>
 
-      <div className="hidden md:block px-10">
-        <Gallery />
-      </div>
+        <div className="hidden md:block px-10">
+          <Gallery />
+        </div>
+      </section>
 
-      <div className="flex animate-fadein flex-col gap-16 md:gap-24">
-        <div className="flex flex-col gap-6">
+      {/* About me */}
+      <section className="space-y-8">
+        <h3 className="font-medium leading-tight">Who Am I?</h3>
+        <div className="space-y-5">
           <p>
             My name is{" "}
             <span className="font-semibold text-primary dark:text-primary-dark">
@@ -83,6 +89,46 @@ const About = () => {
             I'm probably reading a book, travelling or playing sports.
           </p>
         </div>
+      </section>
+
+      <section className="space-y-10">
+        <h3 className="font-medium leading-tight">My Background</h3>
+        <ul className="animated-list space-y-6">
+          {experiences.map((experience, index) => (
+            <li className="flex justify-between transition" key={index}>
+              <div className="flex gap-3">
+                <Image
+                  src={`/experience/${experience.imageSrc}`}
+                  alt={`${experience.company} logo`}
+                  className="rounded-full size-12"
+                  width={48}
+                  height={48}
+                />
+                <div>
+                  <h3 className="font-medium leading-tight">
+                    {experience.position}
+                  </h3>
+                  <p>{experience.company}</p>
+                  {/* <div className="text-secondary dark:text-secondary-dark mt-4 space-y-1">
+                    {experience.description.map((desc, idx) => (
+                      <p key={idx} className="text-sm max-w-lg">
+                        {desc}
+                      </p>
+                    ))}
+                  </div> */}
+                </div>
+              </div>
+              <span className="text-secondary dark:text-secondary-dark text-right">
+                {experience.date}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Socials */}
+      <section className="space-y-8">
+        <h3 className="font-medium leading-tight">Connect</h3>
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 animated-list transition animate-fadein">
           {socials.map((social) => (
@@ -105,19 +151,9 @@ const About = () => {
             </li>
           ))}
         </ul>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 
 export default About;
-
-const experience = [
-  {
-    title: "",
-    company: "",
-    time: "",
-    imageSrc: "",
-    link: "",
-  },
-];

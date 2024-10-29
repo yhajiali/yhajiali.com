@@ -151,7 +151,7 @@ export default function Gallery() {
         width={230}
         height={250}
         rotate={6.3}
-        left={130}
+        left={140}
         index={2}
         flipDirection="left"
       />
@@ -174,7 +174,7 @@ export default function Gallery() {
         width={220}
         height={260}
         rotate={7.6}
-        left={500}
+        left={510}
         index={4}
         flipDirection="left"
       />
