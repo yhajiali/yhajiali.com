@@ -21,7 +21,10 @@ export default function Map({ lng, lat, zoom = 5, pitch = 30, time = null }) {
   }
 
   useEffect(() => {
-    if (map.current) return;
+    if (map.current) {
+      map.current.remove();
+    }
+
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       center: [lng, lat],
@@ -41,7 +44,7 @@ export default function Map({ lng, lat, zoom = 5, pitch = 30, time = null }) {
         .setLngLat([lng, lat])
         .addTo(map.current);
     });
-  });
+  }, [resolvedTheme]);
 
   return (
     <div className="overflow-clip rounded-xl border dark:border-background-secondary-dark h-48 w-full shadow-lg">
