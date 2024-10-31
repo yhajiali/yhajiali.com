@@ -21,8 +21,8 @@ const ThemeSwitcher = () => {
       <MenuButton className="hover:cursor-pointer outline-none ring-0">
         {({ active }) => {
           const iconClassName = clsx(
-            "size-5 text-secondary dark:text-white/70 hover:text-foreground cursor-pointer transition-colors",
-            active ? "text-foreground" : "text-secondary"
+            "size-5 dark:text-white/70 hover:text-primary dark:hover:text-primary-dark cursor-pointer transition-colors",
+            active ? "text-primary dark:text-primary-dark" : "text-secondary"
           );
 
           return resolvedTheme === "dark" ? (

@@ -45,7 +45,7 @@ const page = () => {
       <section className="space-y-3">
         <h3>Links</h3>
 
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 animated-list transition animate-fadein">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 animated-list transition">
           {projects
             .filter((project) => project.title == "Logoist")
             .map((project) =>

@@ -110,9 +110,12 @@ const ContactForm = () => {
         <button
           type="submit"
           className={clsx(
-            "w-full inline-flex justify-center px-4 py-2 text-white font-medium bg-blue-500 hover:bg-blue-400 active:bg-blue-600 rounded-lg duration-150",
-            isSubmitting ? "cursor-not-allowed" : "cursor-pointer"
+            "w-full inline-flex justify-center px-4 py-2 text-white font-medium bg-blue-500 rounded-lg duration-150",
+            isSubmitting
+              ? "cursor-not-allowed"
+              : "cursor-pointer hover:bg-blue-400 active:bg-blue-600"
           )}
+          disabled={isSubmitting}
         >
           {isSubmitting ? (
             <AiOutlineLoading3Quarters className="size-5 animate-spin" />

@@ -1,6 +1,6 @@
 # My Personal Website
 
-> This is my portfolio. Designed to be simplistic and clean while including features like a dark mode toggle, smooth animations and more.
+> This is my portfolio. Designed to be simplistic and clean while including features like a dark mode toggle, hover cards, smooth animations and more.
 
 _Inspired by [Brian Ruiz](https://b-r.io/links)_
 
@@ -9,18 +9,24 @@ _Inspired by [Brian Ruiz](https://b-r.io/links)_
 **_Frontend:_**
 
 - [Tailwind CSS](https://tailwindcss.com/) (Styling)
-- [HeadlessUI](https://www.headlessui.com/) (UI components)
-<!-- - [Radix UI Colors](https://www.radix-ui.com/colors) (Color system)
-- [Framer Motion](https://www.framer.com/motion/) (Animations) -->
+- [HeadlessUI](https://www.headlessui.com/) | [Radix UI](https://www.radix-ui.com/) | [Shadcn/ui](https://ui.shadcn.com/) (UI components)
+- [Framer Motion](https://www.framer.com/motion/) (Gallery Animation)
 
 **_Backend:_**
 
-- [Next.js](https://github.com/BrianRuizy/b-r.io/blob/main/nextjs.org)
+- [Next.js](https://nextjs.org/docs)
 - [TypeScript](https://www.typescriptlang.org)
 
 ## Getting Started
 
 Make sure you have Node.js v18.17.0+ installed on your machine.
+
+First, duplicate the .env file into a new file named .env.local. Update the dummy values with your keys.
+
+Refer to:
+
+- [Mapbox](https://account.mapbox.com)
+- [Resend](https://resend.com/)
 
 1. **Install Dependencies**: `npm install`
 2. **Environment variables**: Copy `.env.example` to a new `.env.local`
@@ -33,13 +39,7 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Learn More
 
-**Next.js**
+**Next.js | Vercel**
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-**Deploy on Vercel**
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+- The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
