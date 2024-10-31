@@ -1,4 +1,5 @@
 // Technology Stack Icons
+import { FaGithub } from "react-icons/fa";
 import {
   SiAxios,
   SiClerk,
@@ -9,12 +10,17 @@ import {
   SiTypescript,
   SiUpstash,
 } from "react-icons/si";
-import { TbBrandReactNative } from "react-icons/tb";
+import { TbBrandReactNative, TbWorld } from "react-icons/tb";
 
 type Project = {
   cover: string;
   title: string;
   desc: string;
+  links: {
+    href: string;
+    label: string;
+    icon: React.ComponentType<{ className?: string }>;
+  }[];
   href?: string;
   status?: "ongoing" | "complete";
   techstack: {
@@ -29,6 +35,18 @@ export const projects: Project[] = [
     cover: "logoist.png",
     title: "Logoist",
     desc: "An AI powered app that creates minimalistic logos based on 3 trendy styles.",
+    links: [
+      {
+        href: "https://logoist.vercel.app",
+        label: "View project",
+        icon: TbWorld,
+      },
+      {
+        href: "https://github.com/yhajiali/logoist",
+        label: "Github",
+        icon: FaGithub,
+      },
+    ],
     techstack: [
       {
         icon: SiTypescript,
@@ -61,6 +79,13 @@ export const projects: Project[] = [
     cover: "whatsthat.png",
     title: "WhatsThat",
     desc: "A native messaging platform developed with React Native and Expo.",
+    links: [
+      {
+        href: "https://github.com/yhajiali/whatsthat",
+        label: "Github",
+        icon: FaGithub,
+      },
+    ],
     techstack: [
       {
         icon: SiJavascript,
@@ -82,6 +107,13 @@ export const projects: Project[] = [
     title: "Sunnah Journeys",
     href: "https://sunnahjourneys.vercel.app",
     desc: "Transform your Umrah experience with our intuitive web app, offering all the necessary information and tools to help you book with confidence.",
+    links: [
+      {
+        href: "https://sunnahjourneys.vercel.app",
+        label: "View project",
+        icon: TbWorld,
+      },
+    ],
     techstack: [
       {
         icon: SiJavascript,
@@ -103,6 +135,18 @@ export const projects: Project[] = [
     title: "My Library",
     href: "https://yh-mylibrary.vercel.app",
     desc: "A comprehensive reading list app that allows you to effortlessly track books you've read, are currently reading, and plan to read.",
+    links: [
+      {
+        href: "https://yh-mylibrary.vercel.app",
+        label: "View project",
+        icon: TbWorld,
+      },
+      {
+        href: "https://github.com/yhajiali/mylibrary",
+        label: "Github",
+        icon: FaGithub,
+      },
+    ],
     techstack: [
       {
         icon: SiJavascript,

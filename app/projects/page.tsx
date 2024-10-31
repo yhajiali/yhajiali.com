@@ -5,7 +5,6 @@ import { Metadata } from "next";
 
 import Heading from "../components/ui/Heading";
 import { projects } from "../../lib/projects";
-import CTA from "../components/ui/CTA";
 
 import {
   Tooltip,
@@ -44,9 +43,7 @@ const Projects = () => {
                     />
                   </figure>
                   <div className="space-y-1">
-                    <h3 className="font-medium leading-tight">
-                      {project.title}
-                    </h3>
+                    <h3>{project.title}</h3>
                     <p>{project.desc}</p>
 
                     <div className="flex gap-4 pt-4">
@@ -69,8 +66,6 @@ const Projects = () => {
             ))}
         </ul>
       </section>
-
-      <CTA />
     </>
   );
 };

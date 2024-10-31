@@ -15,12 +15,6 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const metadata: Metadata = {
@@ -67,28 +61,27 @@ const About = () => {
 
       {/* About me */}
       <section className="space-y-4 md:space-y-8">
-        <h3 className="font-medium leading-tight">Who Am I?</h3>
+        <h3>Who Am I?</h3>
         <div className="space-y-5">
           <p>
-            My name is{" "}
-            <span className="font-semibold text-primary dark:text-primary-dark">
-              Yusuf Haji-Ali.
-            </span>{" "}
-            I recently graduated from Manchester Metropolitan University
-            completing a Bachelor of Science Honours in Software Engineering.
+            My name is <b>Yusuf Haji-Ali.</b> I recently graduated from
+            Manchester Metropolitan University completing a Bachelor of Science
+            Honours in Software Engineering.
           </p>
           <p>
             After leaving university, I joined an AI bootcamp and within a few
             weeks of starting, I was able to develop and deploy my first
             full-stack AI{" "}
-            <Link
-              href="http://logoist.vercel.app"
-              className="inline-flex items-center gap-1 font-semibold text-primary dark:text-primary-dark hover:underline underline-offset-4"
-              target="_blank"
-            >
-              project
-              <FaExternalLinkAlt className="size-3" />
-            </Link>{" "}
+            <b>
+              <Link
+                href="http://logoist.vercel.app"
+                className="inline-flex items-center gap-1 font-semibold text-primary dark:text-primary-dark hover:underline underline-offset-4"
+                target="_blank"
+              >
+                project
+                <FaExternalLinkAlt className="size-3" />
+              </Link>{" "}
+            </b>{" "}
             with no prior experience in AI Technologies.
           </p>
           <p>
@@ -96,17 +89,15 @@ const About = () => {
             Tailwind, Next.js and more. But I am always learning new things.
           </p>
           <p>
-            <span className="font-semibold text-primary dark:text-primary-dark">
-              When I'm not at my desk,
-            </span>{" "}
-            I'm probably reading a book, travelling or playing sports.
+            <b>When I'm not at my desk,</b> I'm probably reading a book,
+            travelling or playing sports.
           </p>
         </div>
       </section>
 
       {/* My Background */}
       <section className="space-y-10">
-        <h3 className="font-medium leading-tight">My Background</h3>
+        <h3>My Background</h3>
 
         <ul className="animated-list space-y-6">
           {experiences.map((experience, index) => (
@@ -123,9 +114,7 @@ const About = () => {
                         height={48}
                       />
                       <div>
-                        <h3 className="font-medium leading-tight">
-                          {experience.position}
-                        </h3>
+                        <h3>{experience.position}</h3>
                         <p>{experience.company}</p>
                       </div>
                     </div>
@@ -152,7 +141,7 @@ const About = () => {
       </section>
 
       <section className="space-y-4 md:space-y-8 overflow-x-clip">
-        <h3 className="font-medium leading-tight">Skills</h3>
+        <h3>Skills</h3>
 
         <Tabs defaultValue="coding" className="space-y-4">
           <TabsList className="overflow-x-auto max-w-full whitespace-nowrap no-scrollbar">
@@ -217,7 +206,7 @@ const About = () => {
 
       {/* Socials */}
       <section className="space-y-4 md:space-y-8">
-        <h3 className="font-medium leading-tight">Connect</h3>
+        <h3>Connect</h3>
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 animated-list transition animate-fadein">
           {socials.map((social) => (

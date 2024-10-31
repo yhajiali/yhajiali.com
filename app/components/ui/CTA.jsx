@@ -1,20 +1,14 @@
 import React from "react";
-import Link from "next/link";
+import CustomLink from "./CustomLink";
 
 const CTA = () => {
   return (
-    <section className="space-y-3 animate-fadein">
-      <h2>Get in touch!</h2>
+    <section className="pt-14 space-y-3 animate-fadein">
+      <h3>Get in touch!</h3>
       <p className="max-w-xl">
         Need more details, or interested in working together? Reach out to me at
-        any of my{" "}
-        <Link
-          href="/links"
-          className="underline underline-offset-4 hover:text-primary dark:hover:text-primary-dark transition-colors duration-200"
-        >
-          links
-        </Link>
-        . I'd be happy to connect!
+        any of my <CustomLink href="/links" label="links" />. I'd be happy to
+        connect!
       </p>
     </section>
   );

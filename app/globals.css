@@ -21,6 +21,14 @@ p {
   @apply text-secondary dark:text-secondary-dark;
 }
 
+h3 {
+  @apply font-medium leading-tight;
+}
+
+b {
+  @apply font-semibold text-primary dark:text-primary-dark;
+}
+
 /* Map styles */
 .mapboxgl-control-container {
   display: none;

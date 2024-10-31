@@ -70,7 +70,7 @@ export default function Home() {
 
       <section className="animate-fadein space-y-6">
         <div className="space-y-3">
-          <h2>Ongoing Projects</h2>
+          <h3>Ongoing Projects</h3>
           <p className="max-w-xl">
             Some of my current passion projects. I'm always keen to listen to
             feedback (I've still got much to learn!)
@@ -100,9 +100,7 @@ export default function Home() {
                     />
                   </figure>
                   <div className="space-y-1">
-                    <h3 className="font-medium leading-tight">
-                      {project.title}
-                    </h3>
+                    <h3>{project.title}</h3>
                     <p>{project.desc}</p>
                   </div>
                 </Link>
