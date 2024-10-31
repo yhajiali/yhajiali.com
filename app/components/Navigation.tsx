@@ -19,7 +19,7 @@ const Navigation = () => {
     <header className="flex items-center justify-between py-4 px-6 md:px-4 max-w-3xl mx-auto">
       <Logo />
 
-      <nav className="flex justify-between items-center gap-5">
+      <nav className="flex justify-between items-center gap-5 z-50">
         <ul className="hidden md:flex items-center gap-2">
           {navLinks.map((link) => (
             <li key={link.href}>

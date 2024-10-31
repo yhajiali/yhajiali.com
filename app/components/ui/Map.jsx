@@ -21,7 +21,6 @@ export default function Map({ lng, lat, zoom = 5, pitch = 30, time = null }) {
   }
 
   useEffect(() => {
-    console;
     if (map.current) return;
     map.current = new mapboxgl.Map({
       container: mapContainer.current,

@@ -133,7 +133,7 @@ export const projects: Project[] = [
     status: "ongoing",
     cover: "mylibrary.png",
     title: "My Library",
-    href: "https://yh-mylibrary.vercel.app",
+    href: "/projects/mylibrary",
     desc: "A comprehensive reading list app that allows you to effortlessly track books you've read, are currently reading, and plan to read.",
     links: [
       {

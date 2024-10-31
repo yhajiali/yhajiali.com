@@ -28,14 +28,14 @@ export default function Home() {
               </p>
             </div>
 
-            <ul className="flex items-center gap-3 flex-wrap animated-list transition animate-fadein">
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3 animated-list transition animate-fadein">
               {socials
                 .filter((social) =>
                   ["LinkedIn", "Twitter", "Github"].includes(social.label)
                 )
                 .map((social) => (
                   <li
-                    className="flex w-full max-w-40 h-12 border dark:border-background-secondary-dark px-4 rounded-lg duration shadow dark:hover:shadow-background-secondary-dark transition-opacity"
+                    className="flex w-full h-12 border dark:border-background-secondary-dark px-4 rounded-lg duration shadow dark:hover:shadow-background-secondary-dark transition-opacity"
                     key={social.href}
                   >
                     <Link
@@ -88,7 +88,7 @@ export default function Home() {
                 <Link
                   className="underline-offset-4 space-y-4"
                   href={`${project.href}`}
-                  target="_blank"
+                  target={project.title === "My Library" ? "" : "_blank"}
                 >
                   <figure className="aspect-video overflow-hidden rounded-md bg-secondary shadow-md">
                     <Image

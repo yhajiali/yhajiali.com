@@ -7,8 +7,8 @@ const CTA = () => {
       <h3>Get in touch!</h3>
       <p className="max-w-xl">
         Need more details, or interested in working together? Reach out to me at
-        any of my <CustomLink href="/links" label="links" />. I'd be happy to
-        connect!
+        any of my <CustomLink href="/links" label="links" notExternal />. I'd be
+        happy to connect!
       </p>
     </section>
   );
