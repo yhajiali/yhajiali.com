@@ -1,4 +1,5 @@
 // Technology Stack Icons
+
 import { FaGithub } from "react-icons/fa";
 import {
   SiAxios,
@@ -10,7 +11,7 @@ import {
   SiTypescript,
   SiUpstash,
 } from "react-icons/si";
-import { TbBrandReactNative, TbWorld } from "react-icons/tb";
+import { TbBrandReactNative, TbCloudCog, TbWorld } from "react-icons/tb";
 
 type Project = {
   cover: string;
@@ -98,6 +99,10 @@ export const projects: Project[] = [
       {
         icon: SiAxios,
         label: "Axios",
+      },
+      {
+        icon: TbCloudCog,
+        label: "Restful API",
       },
     ],
   },
