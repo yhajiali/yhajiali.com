@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <main className="space-y-16 md:space-y-20">
+    <div className="space-y-16 md:space-y-20">
       <Heading title="About" subtitle="A glimpse into me." />
 
       {/* Gallery */}
@@ -230,7 +230,7 @@ const About = () => {
           ))}
         </ul>
       </section>
-    </main>
+    </div>
   );
 };
 

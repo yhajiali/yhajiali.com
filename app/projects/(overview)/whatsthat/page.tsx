@@ -5,6 +5,7 @@ import Image from "next/image";
 import Heading from "@/app/components/ui/Heading";
 import Carousel from "@/app/components/ui/Carousel";
 import CustomLink from "@/app/components/ui/CustomLink";
+import { Skeleton } from "@/components/ui/skeleton";
 
 import { projects } from "@/lib/projects";
 
@@ -138,16 +139,28 @@ const page = () => {
 
       <section className="space-y-6">
         <h3>Technical Details</h3>
+
         <ul className="space-y-3 text-secondary dark:text-secondary-dark italic">
-          <li>API Integration:</li>
+          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
+          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
+          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
+          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
+          {/* <li>API Integration:</li>
           <li>State Management:</li>
           <li>Routing & Navigation:</li>
-          <li>Code Snippets:</li>
+          <li>Code Snippets:</li> */}
         </ul>
       </section>
 
       <section className="space-y-6">
         <h3>Challenges & Thought Process</h3>
+
+        <div className="space-y-3">
+          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
+          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
+          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
+          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
+        </div>
       </section>
 
       <section className="space-y-6">
