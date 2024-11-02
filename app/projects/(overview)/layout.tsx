@@ -1,5 +1,5 @@
 import React from "react";
-import CTA from "../components/ui/CTA";
+import CTA from "../../components/ui/CTA";
 
 const layout = ({
   children,

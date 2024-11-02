@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import {
   SiAxios,
   SiClerk,
+  SiExpo,
   SiJavascript,
   SiNextdotjs,
   SiOpenai,
@@ -97,12 +98,16 @@ export const projects: Project[] = [
         label: "React Native",
       },
       {
+        icon: SiExpo,
+        label: "Expo",
+      },
+      {
         icon: SiAxios,
         label: "Axios",
       },
       {
         icon: TbCloudCog,
-        label: "Restful API",
+        label: "RESTful API",
       },
     ],
   },

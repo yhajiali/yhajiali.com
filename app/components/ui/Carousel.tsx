@@ -8,10 +8,13 @@ import Image from "next/image";
 type Props = {
   images: { src: string; alt: string }[];
   caption?: string;
+  portrait?: boolean;
 };
 
-const Carousel = ({ images, caption }: Props) => {
+const Carousel = ({ images, caption, portrait }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const chevronClass =
+    "absolute top-1/2 transform -translate-y-1/2 size-10 bg-background-secondary-dark hover:bg-blue-500 text-white rounded-md transition-colors";
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
@@ -24,9 +27,15 @@ const Carousel = ({ images, caption }: Props) => {
       prevIndex === images.length - 1 ? 0 : prevIndex + 1
     );
   };
+
   return (
-    <>
-      <figure className="max-w-md overflow-hidden rounded-md mx-auto relative">
+    <div className="space-y-4 py-6">
+      <figure
+        className={clsx(
+          "overflow-hidden rounded-md mx-auto relative",
+          portrait ? "max-w-md" : "w-full"
+        )}
+      >
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -42,37 +51,36 @@ const Carousel = ({ images, caption }: Props) => {
             />
           ))}
         </div>
-        <button
-          onClick={handlePrev}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 size-10 bg-background-secondary-dark text-white rounded-full"
-        >
+
+        {/* Chevron buttons */}
+        <button onClick={handlePrev} className={clsx(chevronClass, "left-2")}>
           &#10094;
         </button>
-        <button
-          onClick={handleNext}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 size-10 bg-background-secondary-dark text-white rounded-full"
-        >
+        <button onClick={handleNext} className={clsx(chevronClass, "right-2")}>
           &#10095;
         </button>
+
+        {/* Carousel Indicators */}
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex justify-center space-x-2 mt-2">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={clsx(
+                "h-1 transition-all duration-300 shadow-md",
+                index === currentIndex
+                  ? "bg-blue-500 w-14"
+                  : "bg-background-secondary-dark w-9"
+              )}
+            />
+          ))}
+        </div>
       </figure>
-      <div className="flex justify-center space-x-2 mt-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={clsx(
-              "w-10 h-1 transition-all duration-300",
-              index === currentIndex
-                ? "bg-blue-500 w-14"
-                : "bg-primary dark:bg-primary-dark"
-            )}
-          />
-        ))}
-      </div>
+
       <figcaption className="text-center text-sm text-secondary dark:text-secondary-dark max-w-lg mx-auto">
         {caption}
       </figcaption>
-    </>
+    </div>
   );
 };
 
