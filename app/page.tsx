@@ -13,11 +13,11 @@ import { projects } from "../lib/projects";
 export default function Home() {
   return (
     <>
-      <section className="space-y-12">
-        <div className="animate-fadein flex ">
+      <section className="space-y-12 animate-fadein">
+        <div className="flex">
           <div className="space-y-5">
             <Avatar />
-            <div className="animate-fadein space-y-4 max-w-xl">
+            <div className="space-y-4 max-w-xl">
               <h1 className="text-3xl font-bold tracking-tight">
                 I'm Yusuf Haji Ali.
               </h1>
@@ -28,7 +28,7 @@ export default function Home() {
               </p>
             </div>
 
-            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3 animated-list transition animate-fadein">
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3 animated-list transition">
               {socials
                 .filter((social) =>
                   ["LinkedIn", "Twitter", "Github"].includes(social.label)

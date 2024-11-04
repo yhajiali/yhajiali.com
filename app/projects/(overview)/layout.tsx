@@ -7,10 +7,10 @@ const layout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <>
+    <article>
       {children}
       <CTA />
-    </>
+    </article>
   );
 };
 

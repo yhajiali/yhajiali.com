@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 const About = () => {
   return (
-    <div className="space-y-16 md:space-y-20">
+    <div className="space-y-16 md:space-y-20 animate-fadein">
       <Heading title="About" subtitle="A glimpse into me." />
 
       {/* Gallery */}

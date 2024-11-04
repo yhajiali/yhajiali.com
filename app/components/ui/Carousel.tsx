@@ -11,7 +11,7 @@ type Props = {
   portrait?: boolean;
 };
 
-const Carousel = ({ images, caption, portrait }: Props) => {
+const Carousel = ({ images, caption, portrait = false }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const chevronClass =
     "absolute top-1/2 transform -translate-y-1/2 size-10 bg-background-secondary-dark hover:bg-blue-500 text-white rounded-md transition-colors";
@@ -44,7 +44,10 @@ const Carousel = ({ images, caption, portrait }: Props) => {
             <Image
               key={index}
               alt={image.alt}
-              className="object-cover size-full"
+              className={clsx(
+                "size-full flex-shrink-0",
+                portrait ? "aspect-auto" : "aspect-video"
+              )}
               src={image.src}
               width={400}
               height={300}
@@ -59,23 +62,23 @@ const Carousel = ({ images, caption, portrait }: Props) => {
         <button onClick={handleNext} className={clsx(chevronClass, "right-2")}>
           &#10095;
         </button>
-
-        {/* Carousel Indicators */}
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex justify-center space-x-2 mt-2">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={clsx(
-                "h-1 transition-all duration-300 shadow-md",
-                index === currentIndex
-                  ? "bg-blue-500 w-14"
-                  : "bg-background-secondary-dark w-9"
-              )}
-            />
-          ))}
-        </div>
       </figure>
+
+      {/* Carousel Indicators */}
+      <div className="flex justify-center space-x-2 mt-2">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={clsx(
+              "h-1 transition-all duration-300 shadow-md",
+              index === currentIndex
+                ? "bg-blue-500 w-14"
+                : "bg-secondary dark:bg-secondary-dark w-9"
+            )}
+          />
+        ))}
+      </div>
 
       <figcaption className="text-center text-sm text-secondary dark:text-secondary-dark max-w-lg mx-auto">
         {caption}

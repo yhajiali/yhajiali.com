@@ -1,6 +1,5 @@
 import React from "react";
 import { Metadata } from "next";
-import Image from "next/image";
 
 import Heading from "@/app/components/ui/Heading";
 import Carousel from "@/app/components/ui/Carousel";
@@ -8,20 +7,13 @@ import CustomLink from "@/app/components/ui/CustomLink";
 import { Skeleton } from "@/components/ui/skeleton";
 
 import { projects } from "@/lib/projects";
+import { whatsthat } from "@/lib/mockups";
 
 export const metadata: Metadata = {
   title: "Yusuf Haji Ali | WhatsThat",
   description:
     "A native messaging platform developed with React Native and Expo.",
 };
-
-const whatsthatMockups = [
-  { src: "/projects/whatsthat/whatsthat1.png", alt: "Registration Screen" },
-  { src: "/projects/whatsthat/whatsthat2.png", alt: "Contacts Screen" },
-  { src: "/projects/whatsthat/whatsthat3.png", alt: "Search Screen" },
-  { src: "/projects/whatsthat/whatsthat4.png", alt: "Chat Screen" },
-  { src: "/projects/whatsthat/whatsthat5.png", alt: "Profile Screen" },
-];
 
 const page = () => {
   return (
@@ -106,7 +98,7 @@ const page = () => {
             allowFullScreen
           />
 
-          <p>Whatsthat Wireframing - Navigation Structure & Screens</p>
+          <p>WhatsThat Wireframing - Navigation Structure & Screens</p>
         </div>
 
         <p>
@@ -122,7 +114,7 @@ const page = () => {
         </p>
 
         <Carousel
-          images={whatsthatMockups}
+          images={whatsthat}
           caption="Key screens showcasing the seamless UI of the final product."
           portrait
         />
@@ -168,7 +160,7 @@ const page = () => {
 
         <div className="space-y-3">
           <p>
-            During the development of Whatsthat, I gained valuable experience in
+            During the development of WhatsThat, I gained valuable experience in
             API integration, focusing on asynchronous calls and endpoint
             interactions to ensure smooth data flow between the app and server.
           </p>
