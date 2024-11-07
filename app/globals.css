@@ -29,6 +29,14 @@ b {
   @apply font-semibold text-primary dark:text-primary-dark;
 }
 
+figcaption {
+  @apply text-secondary dark:text-secondary-dark text-center text-sm max-w-lg mx-auto;
+}
+
+code {
+  @apply bg-background-secondary dark:bg-background-secondary-dark px-2 py-1 rounded-md text-sm;
+}
+
 /* Map styles */
 .mapboxgl-control-container {
   display: none;

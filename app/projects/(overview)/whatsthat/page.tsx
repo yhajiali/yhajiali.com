@@ -4,10 +4,10 @@ import { Metadata } from "next";
 import Heading from "@/app/components/ui/Heading";
 import Carousel from "@/app/components/ui/Carousel";
 import CustomLink from "@/app/components/ui/CustomLink";
-import { Skeleton } from "@/components/ui/skeleton";
 
 import { projects } from "@/lib/projects";
-import { whatsthat } from "@/lib/mockups";
+import { whatsthat } from "@/lib/carousel";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Yusuf Haji Ali | WhatsThat",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <main className="relative space-y-14 animate-fadein">
-      <Heading title="WhatsThat" />
+    <article className="space-y-14 animate-fadein">
+      <Heading title="WhatsThat" subtitle="July 2023" />
 
       <section className="space-y-4">
         <h3>Overview</h3>
@@ -118,41 +118,110 @@ const page = () => {
           caption="Key screens showcasing the seamless UI of the final product."
           portrait
         />
-
-        <p>
-          To see how it all comes together,{" "}
-          <CustomLink
-            href={"https:/github.com/yhajiali/whatsthat"}
-            label="explore the complete project on GitHub"
-          />{" "}
-          and delve into the code behind the app.
-        </p>
       </section>
 
       <section className="space-y-6">
         <h3>Technical Details</h3>
 
-        <ul className="space-y-3 text-secondary dark:text-secondary-dark italic">
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
-          {/* <li>API Integration:</li>
-          <li>State Management:</li>
-          <li>Routing & Navigation:</li>
-          <li>Code Snippets:</li> */}
-        </ul>
+        <p>
+          For this project, I worked with an API server that provided endpoints
+          covering user, contact, and chat management. This setup allowed users
+          to sign up, log in, and handle their profiles while supporting
+          features like searching for other users, managing contacts, and
+          creating chat groups.
+        </p>
+
+        <p>
+          I set up API requests for each endpoint and used <code>useState</code>{" "}
+          and <code>useEffect</code> hooks to manage state and keep the data
+          flowing smoothly between components, updating dynamically as users
+          interacted with the app.
+        </p>
+
+        <figure className="space-y-3 py-3">
+          <Image
+            src="/projects/whatsthat/wt-notion.png"
+            alt="My Notion - WhatsThat API Endpoints checklist"
+            className="aspect-video size-full object-cover rounded-md shadow-md"
+            width={400}
+            height={300}
+          />
+          <figcaption>My Notion - WhatsThat API Endpoints</figcaption>
+        </figure>
+
+        <p>
+          To manage navigation, I used React Native’s tab navigation, which
+          provided an intuitive layout for users to switch between different
+          sections, like chat, contacts, and settings. The tab-based structure
+          kept the UI clean and simple to navigate.
+        </p>
+
+        <p>
+          Each component was styled with React Native’s <code>StyleSheet</code>{" "}
+          where I created dedicated stylesheets and applied them to components,
+          keeping styles modular and easy to maintain.
+        </p>
       </section>
 
       <section className="space-y-6">
         <h3>Challenges & Thought Process</h3>
 
-        <div className="space-y-3">
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
+        <div className="space-y-3"></div>
+
+        <p>
+          Developing WhatsThat introduced several challenges, especially with
+          API interaction and error handling. One recurring issue was unexpected
+          server and unauthorised errors, especially when interacting with
+          DELETE or PATCH endpoints, like editing a message or unblocking a
+          user.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 space-y-14 sm:space-y-0">
+          <figure className="space-y-3 size-full">
+            <Image
+              src="/projects/whatsthat/wt-code-errorlog.png"
+              alt="Server error when trying to edit a message"
+              className="size-full object-cover rounded-md shadow-md"
+              width={400}
+              height={300}
+            />
+            <figcaption>Server error when trying to edit a message</figcaption>
+          </figure>
+
+          <figure className="space-y-3 size-full">
+            <video
+              src="/projects/whatsthat/wt-block-user.mov"
+              className="aspect-video rounded-md shadow-md size-full"
+              controls
+            />
+            <figcaption>
+              Unauthorised error when trying to block a user
+            </figcaption>
+          </figure>
         </div>
+
+        <p className="pt-24 sm:pt-12">
+          Initially, these errors weren’t well-documented, so I had to debug by
+          inspecting API responses and tweaking the request headers and body
+          format. Through persistent trial and error, I was able to identify and
+          resolve these issues by adapting the request structure to match API
+          requirements more precisely.
+        </p>
+
+        <p>
+          I also resolved issues with Axios after realizing that I had been
+          using the incorrect syntax for some of the request methods, which
+          contributed to the unauthorized errors I was facing.
+        </p>
+
+        <p>
+          To see how the app all comes together,{" "}
+          <CustomLink
+            href={"https:/github.com/yhajiali/whatsthat"}
+            label="explore the complete project on GitHub"
+          />{" "}
+          and delve into the code.
+        </p>
       </section>
 
       <section className="space-y-6">
@@ -160,9 +229,11 @@ const page = () => {
 
         <div className="space-y-3">
           <p>
-            During the development of WhatsThat, I gained valuable experience in
-            API integration, focusing on asynchronous calls and endpoint
-            interactions to ensure smooth data flow between the app and server.
+            Ultimately, this project not only deepened my understanding of React
+            Native and API integration but also highlighted the importance of
+            resilience and thorough testing in app development. These
+            experiences have sharpened my ability to troubleshoot and adapt,
+            making me more confident in tackling complex mobile app features.
           </p>
 
           <p>
@@ -172,13 +243,12 @@ const page = () => {
           </p>
 
           <p>
-            I learned to manage state effectively in React Native and overcame
-            the challenges of error handling, which enhanced my problem-solving
-            skills.
+            Overall, I enjoyed developing this app and would love to explore
+            more Mobile App Development in future.
           </p>
         </div>
       </section>
-    </main>
+    </article>
   );
 };
 

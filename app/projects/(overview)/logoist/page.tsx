@@ -8,7 +8,7 @@ import CustomLink from "@/app/components/ui/CustomLink";
 import Carousel from "@/app/components/ui/Carousel";
 
 import { projects } from "@/lib/projects";
-import { logoist } from "@/lib/mockups";
+import { logoist } from "@/lib/carousel";
 
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <main className="relative space-y-14 animate-fadein">
-      <Heading title="Logoist" />
+    <article className="space-y-14 animate-fadein">
+      <Heading title="Logoist" subtitle="May 2024" />
 
       <section className="space-y-8">
         <div className="space-y-4">
@@ -201,7 +201,7 @@ const page = () => {
           <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
         </div>
       </section>
-    </main>
+    </article>
   );
 };
 

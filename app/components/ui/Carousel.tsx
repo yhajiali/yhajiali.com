@@ -80,9 +80,7 @@ const Carousel = ({ images, caption, portrait = false }: Props) => {
         ))}
       </div>
 
-      <figcaption className="text-center text-sm text-secondary dark:text-secondary-dark max-w-lg mx-auto">
-        {caption}
-      </figcaption>
+      <figcaption>{caption}</figcaption>
     </div>
   );
 };
