@@ -11,7 +11,6 @@ import { projects } from "@/lib/projects";
 import { logoist } from "@/lib/carousel";
 
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
-import { Skeleton } from "@/components/ui/skeleton";
 
 export const metadata: Metadata = {
   title: "Yusuf Haji Ali | Logoist",
@@ -66,7 +65,7 @@ const page = () => {
                     >
                       <div className="flex items-center gap-3">
                         <link.icon className="text-base size-5" />
-                        <span className="">{link.label}</span>
+                        <span className="capitalize">{link.label}</span>
                       </div>
                       <ArrowUpRightIcon className="size-4" />
                     </Link>
@@ -125,9 +124,13 @@ const page = () => {
             <b>Rate limiting</b> to control API usage and reduce costs.
           </li>
           <li>
-            <b>Open Source:</b> Codebase available on{" "}
-            <CustomLink href={projects[0].links[1].href} label="Github" /> for
-            community use and contributions.
+            <b>Theme Switcher:</b> Toggle between light and dark mode using{" "}
+            <a
+              href="https://nextui.org/docs/customization/dark-mode"
+              target="_blank"
+            >
+              <code>next-themes</code>
+            </a>
           </li>
         </ul>
       </section>
@@ -151,18 +154,38 @@ const page = () => {
         <h3>Web Stack & Explanation</h3>
 
         <div className="space-y-3">
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
+          <p>
+            Built with <b>Next.js</b> to leverage server-side rendering and SEO
+            benefits, using the App Router to keep the structure organized,
+            enhancing both performance and user experience.
+          </p>
+          <p>
+            To ensure type safety and minimize bugs, we used <b>TypeScript</b>{" "}
+            to make the codebase easier to manage and scale, especially with
+            complex components.
+          </p>
+          <p>
+            We used <b>Tailwind CSS</b> to speed up styling with a utility-first
+            approach, keeping the design minimal and the code clean.
+          </p>
+          <p>
+            <b>OpenAI's Dall-E 3</b> model powers the logo generator feature by
+            generating custom designs based on the user's style of choice.
+          </p>
+          <p>
+            We used <b>Clerk</b> as it simplifies authentication with pre-built
+            components, allowing more focus on core functionality.
+          </p>
+          <p>
+            To reduce high image requests, <b>Upstash</b> was used to enable
+            efficient rate limiting with a serverless, Redis-based solution,
+            keeping access fast and scalable.
+          </p>
         </div>
       </section>
 
       <section>
-        <Carousel
-          images={logoist}
-          caption="Mockups of the Logoist logo generation process."
-        />
+        <Carousel images={logoist} useAlt />
       </section>
 
       <section className="space-y-6">
@@ -196,9 +219,29 @@ const page = () => {
         <h3>Learnings</h3>
 
         <div className="space-y-3">
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
-          <Skeleton className="w-full h-4 bg-background-secondary dark:bg-background-secondary-dark" />
+          <p>
+            Experimenting with OpenAI introduced me to building interactive,
+            AI-driven features. It learnt how to format prompts and clearly
+            define the AI's role to get better and more accurate responses.
+          </p>
+
+          <p>
+            Setting up Clerk for authentication saved time and provided insights
+            into handling secure user sessions with minimal hassle. I also
+            learned the importance of choosing third-party tools that simplify
+            complex tasks without sacrificing security or user experience.
+          </p>
+
+          <p>
+            Collaborating with a team brought a fresh layer of teamwork and
+            communication, working together to bring a shared vision to life.
+          </p>
+
+          <p>
+            Overall, developing this app was a rewarding dive into modern web
+            technologies, each bringing something unique to the stack and
+            challenging me to grow as a developer.
+          </p>
         </div>
       </section>
     </article>

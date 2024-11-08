@@ -54,7 +54,7 @@ const About = () => {
           </figure>
         </div>
 
-        <div className="hidden md:block px-10">
+        <div className="hidden md:block px-10 animate-fadein">
           <Gallery />
         </div>
       </section>
@@ -64,7 +64,7 @@ const About = () => {
         <h3>Who Am I?</h3>
         <div className="space-y-5">
           <p>
-            My name is <b>Yusuf Haji-Ali.</b> I recently graduated from
+            My name is <b>Yusuf Haji Ali.</b> I recently graduated from
             Manchester Metropolitan University completing a Bachelor of Science
             Honours in Software Engineering.
           </p>

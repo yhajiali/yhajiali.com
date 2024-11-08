@@ -141,18 +141,18 @@ const page = () => {
         <figure className="space-y-3 py-3">
           <Image
             src="/projects/whatsthat/wt-notion.png"
-            alt="My Notion - WhatsThat API Endpoints checklist"
+            alt="WhatsThat API Endpoints checklist"
             className="aspect-video size-full object-cover rounded-md shadow-md"
             width={400}
             height={300}
           />
-          <figcaption>My Notion - WhatsThat API Endpoints</figcaption>
+          <figcaption>WhatsThat API Endpoints</figcaption>
         </figure>
 
         <p>
           To manage navigation, I used React Native’s tab navigation, which
           provided an intuitive layout for users to switch between different
-          sections, like chat, contacts, and settings. The tab-based structure
+          sections like chat, contacts, and profile. The tab-based structure
           kept the UI clean and simple to navigate.
         </p>
 

@@ -9,6 +9,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 import { socials } from "../lib/links";
 import { projects } from "../lib/projects";
+// import GitHubContributionGraph from "./components/ui/GitHubContributionGraph";
 
 export default function Home() {
   return (
@@ -58,6 +59,8 @@ export default function Home() {
       </section>
 
       <section className="animate-fadein grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {/* <GitHubContributionGraph /> */}
+
         <div className="relative">
           <Map lng={-2.244644} lat={53.483959} />
           <div className="absolute bottom-4 left-4 flex items-center rounded-lg bg-neutral-100/75 px-4 py-1.5 backdrop-blur dark:bg-neutral-900/75 md:bottom-6 md:left-6">
@@ -72,8 +75,8 @@ export default function Home() {
         <div className="space-y-3">
           <h3>Ongoing Projects</h3>
           <p className="max-w-xl">
-            Some of my current passion projects. I'm always keen to listen to
-            feedback (I've still got much to learn!)
+            Some of my current passion projects. I'm always keen to listen
+            feedback, as there's always more to learn!
           </p>
         </div>
 
