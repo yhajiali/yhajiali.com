@@ -2,7 +2,7 @@
 
 > This is my portfolio. Designed to be simplistic and clean while including features like a dark mode toggle, hover cards, smooth animations and more.
 
-_Inspired by [Brian Ruiz](https://b-r.io/links)_
+_Inspired by [Brian Ruiz](https://www.b-r.io/links)_
 
 ## Tech Stack
 

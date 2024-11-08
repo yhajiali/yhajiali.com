@@ -9,9 +9,15 @@ type Props = {
   images: { src: string; alt: string }[];
   caption?: string;
   portrait?: boolean;
+  useAlt?: boolean;
 };
 
-const Carousel = ({ images, caption, portrait = false }: Props) => {
+const Carousel = ({
+  images,
+  caption,
+  portrait = false,
+  useAlt = false,
+}: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const chevronClass =
     "absolute top-1/2 transform -translate-y-1/2 size-10 bg-background-secondary-dark hover:bg-blue-500 text-white rounded-md transition-colors";
@@ -80,7 +86,7 @@ const Carousel = ({ images, caption, portrait = false }: Props) => {
         ))}
       </div>
 
-      <figcaption>{caption}</figcaption>
+      <figcaption>{useAlt ? images[currentIndex].alt : caption}</figcaption>
     </div>
   );
 };

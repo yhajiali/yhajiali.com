@@ -1,8 +1,15 @@
 import React from "react";
-import { socials } from "../../lib/links";
+import { Metadata } from "next";
 import Link from "next/link";
+
+import { socials } from "../../lib/links";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Avatar from "../components/ui/Avatar";
+
+export const metadata: Metadata = {
+  title: "Yusuf Haji Ali | Links",
+  description: "All my social links and ways to connect with me.",
+};
 
 const Links = () => {
   return (
@@ -10,7 +17,7 @@ const Links = () => {
       <div className="flex flex-col items-center justify-center gap-3">
         <Avatar />
         <div className="animate-fadein">
-          <h3 className="text-2xl font-bold tracking-tight">Yusuf Haji-Ali</h3>
+          <h3 className="text-2xl font-bold tracking-tight">Yusuf Haji Ali</h3>
           <p>Software Engineer.</p>
         </div>
       </div>

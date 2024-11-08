@@ -1,4 +1,3 @@
-import { FaJava } from "react-icons/fa";
 import {
   SiClerk,
   SiTailwindcss,
@@ -9,7 +8,6 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
-  SiPython,
   SiReact,
   SiGit,
 } from "react-icons/si";
@@ -92,11 +90,6 @@ export const skills: skills[] = [
   {
     icon: SiTypescript,
     label: "TypeScript",
-    type: "coding",
-  },
-  {
-    icon: FaJava,
-    label: "Java",
     type: "coding",
   },
   {
