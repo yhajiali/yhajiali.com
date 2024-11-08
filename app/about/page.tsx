@@ -54,7 +54,7 @@ const About = () => {
           </figure>
         </div>
 
-        <div className="hidden md:block px-10">
+        <div className="hidden md:block px-10 animate-fadein">
           <Gallery />
         </div>
       </section>

@@ -1,8 +1,15 @@
 import React from "react";
-import { socials } from "../../lib/links";
+import { Metadata } from "next";
 import Link from "next/link";
+
+import { socials } from "../../lib/links";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Avatar from "../components/ui/Avatar";
+
+export const metadata: Metadata = {
+  title: "Yusuf Haji Ali | Links",
+  description: "All my social links and ways to connect with me.",
+};
 
 const Links = () => {
   return (
