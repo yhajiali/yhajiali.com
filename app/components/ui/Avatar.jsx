@@ -5,7 +5,7 @@ const Avatar = () => {
   return (
     <figure className="animate-popout size-16 md:size-20 rounded-full overflow-hidden object-cover">
       <Image
-        src={"/avatar.jpeg"}
+        src={"/avatar.jpg"}
         alt="Yusuf Haji Ali"
         width={200}
         height={200}

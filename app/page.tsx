@@ -23,9 +23,9 @@ export default function Home() {
                 I'm Yusuf Haji Ali.
               </h1>
               <p>
-                I'm a 26 year old Software Engineer based in the UK. Currently
-                I’m exploring AI technologies like OpenAI's API models and
-                applying my learning through cool personal projects. 👨🏽‍💻
+                A Software Engineer based in the UK. I'm currently exploring AI
+                technologies like OpenAI's API models and applying my learning
+                through cool personal projects. 👨🏽‍💻
               </p>
             </div>
 
