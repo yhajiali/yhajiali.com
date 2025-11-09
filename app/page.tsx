@@ -75,8 +75,8 @@ export default function Home() {
         <div className="space-y-3">
           <h3>Ongoing Projects</h3>
           <p className="max-w-xl">
-            Some of my current passion projects. I'm always keen to listen
-            feedback, as there's always more to learn!
+            Some of my current projects. I'm always keen on feedback, as there's
+            always more to learn!
           </p>
         </div>
 

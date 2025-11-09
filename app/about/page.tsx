@@ -143,9 +143,9 @@ const About = () => {
       <section className="space-y-4 md:space-y-8 overflow-x-clip">
         <h3>Skills</h3>
 
-        <Tabs defaultValue="coding" className="space-y-4">
+        <Tabs defaultValue="Languages" className="space-y-4">
           <TabsList className="overflow-x-auto max-w-full whitespace-nowrap no-scrollbar">
-            <TabsTrigger value="coding">Coding</TabsTrigger>
+            <TabsTrigger value="Languages">Languages</TabsTrigger>
             <TabsTrigger value="Frameworks & Libraries">
               Frameworks & Libraries
             </TabsTrigger>
@@ -154,10 +154,10 @@ const About = () => {
             </TabsTrigger>
           </TabsList>
 
-          <TabsContent value="coding">
+          <TabsContent value="Languages">
             <ul className="flex flex-wrap gap-10">
               {skills
-                .filter((skill) => skill.type === "coding")
+                .filter((skill) => skill.type === "languages")
                 .map((skill, idx) => (
                   <li
                     className="transition flex flex-col items-center gap-2 text-sm animate-fadein"

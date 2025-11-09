@@ -10,13 +10,19 @@ import {
   SiJavascript,
   SiReact,
   SiGit,
+  SiMysql,
+  SiPostgresql,
+  SiSqlalchemy,
+  SiSqlite,
+  SiDatabricks,
+  SiThemoviedatabase,
 } from "react-icons/si";
-import { TbBrandReactNative } from "react-icons/tb";
+import { TbBrandReactNative, TbDatabase } from "react-icons/tb";
 
 type skills = {
   icon: React.ComponentType<{ className?: string }>;
   label: string;
-  type: "coding" | "f&l" | "t&t";
+  type: "languages" | "f&l" | "t&t";
 };
 
 export const experiences = [
@@ -75,22 +81,27 @@ export const skills: skills[] = [
   {
     icon: SiHtml5,
     label: "HTML5",
-    type: "coding",
+    type: "languages",
   },
   {
     icon: SiCss3,
     label: "CSS3",
-    type: "coding",
+    type: "languages",
   },
   {
     icon: SiJavascript,
     label: "JavaScript",
-    type: "coding",
+    type: "languages",
   },
   {
     icon: SiTypescript,
     label: "TypeScript",
-    type: "coding",
+    type: "languages",
+  },
+  {
+    icon: TbDatabase,
+    label: "SQL",
+    type: "languages",
   },
   {
     icon: SiNextdotjs,
