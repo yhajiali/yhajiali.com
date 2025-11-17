@@ -64,29 +64,23 @@ const About = () => {
         <h3>Who Am I?</h3>
         <div className="space-y-5">
           <p>
-            My name is <b>Yusuf Haji Ali.</b> I recently graduated from
-            Manchester Metropolitan University completing a Bachelor of Science
-            Honours in Software Engineering.
+            My name is <b>Yusuf Haji Ali.</b> A Software Engineer focused on
+            frontend development, full-stack web apps, and AI-driven features. I
+            build clean, fast, and intuitive products with a strong emphasis on
+            user experience, performance, and real-world impact.
           </p>
           <p>
-            After leaving university, I joined an AI bootcamp and within a few
-            weeks of starting, I was able to develop and deploy my first
-            full-stack AI{" "}
-            <b>
-              <Link
-                href="http://logoist.vercel.app"
-                className="inline-flex items-center gap-1 font-semibold text-primary dark:text-primary-dark hover:underline underline-offset-4"
-                target="_blank"
-              >
-                project
-                <FaExternalLinkAlt className="size-3" />
-              </Link>{" "}
-            </b>{" "}
-            with no prior experience in AI Technologies.
+            My experience includes delivering production-ready work across AI
+            tools, cross-platform mobile apps, and responsive web platforms
+            using TypeScript, React, Tailwind, Next.js and more. But I am always
+            learning new things.
           </p>
           <p>
-            I specialise in full-stack web development using TypeScript, React,
-            Tailwind, Next.js and more. But I am always learning new things.
+            After recovering from a major injury shortly after graduating, I
+            developed a disciplined, resilient work ethic and the ability to
+            learn quickly, adapt, and perform under pressure. Fully recovered,
+            I’m driven to contribute these strengths within a growth-minded
+            engineering team.
           </p>
           <p>
             <b>When I'm not at my desk,</b> I'm probably reading a book,
@@ -141,7 +135,7 @@ const About = () => {
       </section>
 
       <section className="space-y-4 md:space-y-8 overflow-x-clip">
-        <h3>Skills</h3>
+        <h3>Technical Skills</h3>
 
         <Tabs defaultValue="Languages" className="space-y-4">
           <TabsList className="overflow-x-auto max-w-full whitespace-nowrap no-scrollbar">

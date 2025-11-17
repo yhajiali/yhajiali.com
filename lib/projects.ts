@@ -113,15 +113,20 @@ export const projects: Project[] = [
   },
   {
     status: "ongoing",
-    cover: "sunnahjourneys.png",
-    title: "Sunnah Journeys",
-    href: "https://sunnahjourneys.vercel.app",
-    desc: "Transform your Umrah experience with our intuitive web app, offering all the necessary information and tools to help you book with confidence.",
+    cover: "mylibrary.png",
+    title: "My Library",
+    href: "/projects/mylibrary",
+    desc: "A comprehensive reading list app that allows you to effortlessly track books you've read, are currently reading, and plan to read.",
     links: [
       {
-        href: "https://sunnahjourneys.vercel.app",
+        href: "https://yh-mylibrary.vercel.app",
         label: "View project",
         icon: TbWorld,
+      },
+      {
+        href: "https://github.com/yhajiali/mylibrary",
+        label: "Github",
+        icon: FaGithub,
       },
     ],
     techstack: [
@@ -141,20 +146,15 @@ export const projects: Project[] = [
   },
   {
     status: "ongoing",
-    cover: "mylibrary.png",
-    title: "My Library",
-    href: "/projects/mylibrary",
-    desc: "A comprehensive reading list app that allows you to effortlessly track books you've read, are currently reading, and plan to read.",
+    cover: "sunnahjourneys.png",
+    title: "Sunnah Journeys",
+    href: "https://sunnahjourneys.vercel.app",
+    desc: "Transform your Umrah experience with our intuitive web app, offering all the necessary information and tools to help you book with confidence.",
     links: [
       {
-        href: "https://yh-mylibrary.vercel.app",
+        href: "https://sunnahjourneys.vercel.app",
         label: "View project",
         icon: TbWorld,
-      },
-      {
-        href: "https://github.com/yhajiali/mylibrary",
-        label: "Github",
-        icon: FaGithub,
       },
     ],
     techstack: [
