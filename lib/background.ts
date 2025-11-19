@@ -1,3 +1,4 @@
+import { FaJava } from "react-icons/fa6";
 import {
   SiClerk,
   SiTailwindcss,
@@ -10,6 +11,10 @@ import {
   SiJavascript,
   SiReact,
   SiGit,
+  SiPython,
+  SiFirebase,
+  SiVisualstudiocode,
+  SiAxios,
 } from "react-icons/si";
 import { TbBrandReactNative, TbDatabase } from "react-icons/tb";
 
@@ -27,7 +32,6 @@ export const experiences = [
     description: [
       "• Delivered a full AI powered application in the first week using OpenAI APIs, completing design, development, testing and deployment.",
       "• Improved development speed by supporting CI CD workflows and maintaining clean version control with Git and GitHub.",
-      "• Suggested new tools and experiment ideas in weekly sprints which accelerated model testing and improved accuracy by X percent.",
       "• Reviewed code for peers and enhanced maintainability across projects through clearer structures and reusable components.",
       "• Took ownership of testing and refining AI prompts, increasing reliability and reducing unnecessary API calls.",
     ],
@@ -74,13 +78,8 @@ export const experiences = [
 
 export const skills: skills[] = [
   {
-    icon: SiHtml5,
-    label: "HTML5",
-    type: "languages",
-  },
-  {
-    icon: SiCss3,
-    label: "CSS3",
+    icon: SiTypescript,
+    label: "TypeScript",
     type: "languages",
   },
   {
@@ -89,8 +88,13 @@ export const skills: skills[] = [
     type: "languages",
   },
   {
-    icon: SiTypescript,
-    label: "TypeScript",
+    icon: SiPython,
+    label: "Python",
+    type: "languages",
+  },
+  {
+    icon: FaJava,
+    label: "Java",
     type: "languages",
   },
   {
@@ -99,18 +103,23 @@ export const skills: skills[] = [
     type: "languages",
   },
   {
-    icon: SiNextdotjs,
-    label: "Next.js",
-    type: "f&l",
+    icon: SiHtml5,
+    label: "HTML",
+    type: "languages",
   },
   {
-    icon: SiTailwindcss,
-    label: "Tailwind CSS",
-    type: "f&l",
+    icon: SiCss3,
+    label: "CSS",
+    type: "languages",
   },
   {
     icon: SiReact,
     label: "REACT",
+    type: "f&l",
+  },
+  {
+    icon: SiNextdotjs,
+    label: "Next.js",
     type: "f&l",
   },
   {
@@ -119,13 +128,18 @@ export const skills: skills[] = [
     type: "f&l",
   },
   {
+    icon: SiTailwindcss,
+    label: "Tailwind CSS",
+    type: "f&l",
+  },
+  {
     icon: SiGit,
     label: "Git",
     type: "t&t",
   },
   {
-    icon: SiOpenai,
-    label: "OpenAI",
+    icon: SiFirebase,
+    label: "Firebase",
     type: "t&t",
   },
   {
@@ -134,8 +148,23 @@ export const skills: skills[] = [
     type: "t&t",
   },
   {
+    icon: SiAxios,
+    label: "Axios",
+    type: "t&t",
+  },
+  {
+    icon: SiOpenai,
+    label: "OpenAI",
+    type: "t&t",
+  },
+  {
     icon: SiUpstash,
     label: "Upstash",
+    type: "t&t",
+  },
+  {
+    icon: SiVisualstudiocode,
+    label: "VS Code",
     type: "t&t",
   },
 ];

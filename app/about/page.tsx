@@ -149,7 +149,7 @@ const About = () => {
           </TabsList>
 
           <TabsContent value="Languages">
-            <ul className="flex flex-wrap gap-10">
+            <ul className="flex flex-wrap justify-evenly md:justify-start gap-8">
               {skills
                 .filter((skill) => skill.type === "languages")
                 .map((skill, idx) => (
@@ -165,7 +165,7 @@ const About = () => {
           </TabsContent>
 
           <TabsContent value="Frameworks & Libraries">
-            <ul className="flex flex-wrap gap-x-10 gap-y-6">
+            <ul className="flex flex-wrap justify-evenly md:justify-start gap-8">
               {skills
                 .filter((skill) => skill.type === "f&l")
                 .map((skill, idx) => (
@@ -181,7 +181,7 @@ const About = () => {
           </TabsContent>
 
           <TabsContent value="Tools & Technologies">
-            <ul className="flex flex-wrap gap-10">
+            <ul className="flex flex-wrap justify-evenly md:justify-start gap-8">
               {skills
                 .filter((skill) => skill.type === "t&t")
                 .map((skill, idx) => (
