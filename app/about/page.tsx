@@ -64,7 +64,7 @@ const About = () => {
         <h3>Who Am I?</h3>
         <div className="space-y-5">
           <p>
-            My name is <b>Yusuf Haji Ali.</b> A Software Engineer focused on
+            My name is <b>Yusuf Haji Ali.</b> I'm a Software Engineer focused on
             frontend development, full-stack web apps, and AI-driven features. I
             build clean, fast, and intuitive products with a strong emphasis on
             user experience, performance, and real-world impact.
