@@ -39,13 +39,26 @@ export const experiences = [
     link: "",
   },
   {
+    imageSrc: "sunnahjourneys.png",
+    position: "Frontend Developer",
+    company: "Sunnah Journeys",
+    description: [
+      "• Built an intuitive and responsive interface that contributed to more than 350 users in the first month of launch.",
+      "• Collaborated with a distributed team and delivered all assigned features within tight timelines.",
+      "• Developed the initial logic for Stripe booking integration, preparing the platform for secure direct payments.",
+      "• Owned the UI component structure which improved reusability and reduced development time for future updates.",
+    ],
+    date: "Oct - Nov 2024",
+    link: "",
+  },
+  {
     imageSrc: "aqa.jpeg",
     position: "Moderation Administrator",
     company: "AQA",
     description: [
       "• Conducted quality assurance processes with a strong attention to detail, ensuring accuracy and consistency in examination marks.",
       "• Managed data validation tasks by cross‑referencing mark forms with system entries, highlighting proficiency in data handling.",
-      "• Coordinated effectively with moderators to resolve discrepancies, improving my problem‑solving abilities and communication skills.",
+      "• Coordinated with over 20 exam moderators to resolve marking discrepancies, ensuring timely & accurate release of exam results.",
     ],
     date: "Jun - Aug 2024",
     link: "",
